@@ -1,0 +1,1036 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D822C775-5DF1-9E6A-FB07-B9ECE2594EEB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
+    <CompilerResponseFile></CompilerResponseFile>
+    <UnityProjectGenerator>VSTU</UnityProjectGenerator>
+    <UnityProjectType>Game:1</UnityProjectType>
+    <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
+    <UnityVersion>2017.4.2f2</UnityVersion>
+    <RootNamespace></RootNamespace>
+    <LangVersion>4</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\UnityVS_bin\Debug\</OutputPath>
+    <IntermediateOutputPath>Temp\UnityVS_obj\Debug\</IntermediateOutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2017_4_2;UNITY_2017_4;UNITY_2017;PLATFORM_ARCH_64;UNITY_64;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_GENERICS;ENABLE_PVR_GI;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_GRID;ENABLE_TILEMAP;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_DIRECTOR;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_TIMELINE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_NATIVE_ARRAY;ENABLE_SPRITE_MASKING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;ENABLE_MONO_BDWGC;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_VIDEO;ENABLE_RMGUI;ENABLE_PACKMAN;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_STYLE_SHEETS;ENABLE_LOCALIZATION;PLATFORM_STANDALONE_WIN;PLATFORM_STANDALONE;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_EVENT_QUEUE;ENABLE_CLUSTERINPUT;ENABLE_VR;ENABLE_AR;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_2_0_SUBSET;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_NATIVE_ARRAY_CHECKS;UNITY_TEAM_LICENSE;ENABLE_VSTU;CROSS_PLATFORM_INPUT;WEATHER_MAKER_PRESENT</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>Temp\UnityVS_bin\Release\</OutputPath>
+    <IntermediateOutputPath>Temp\UnityVS_obj\Release\</IntermediateOutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DefineConstants>TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2017_4_2;UNITY_2017_4;UNITY_2017;PLATFORM_ARCH_64;UNITY_64;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_GENERICS;ENABLE_PVR_GI;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_GRID;ENABLE_TILEMAP;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_DIRECTOR;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_TIMELINE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_NATIVE_ARRAY;ENABLE_SPRITE_MASKING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;ENABLE_MONO_BDWGC;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_VIDEO;ENABLE_RMGUI;ENABLE_PACKMAN;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_STYLE_SHEETS;ENABLE_LOCALIZATION;PLATFORM_STANDALONE_WIN;PLATFORM_STANDALONE;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_EVENT_QUEUE;ENABLE_CLUSTERINPUT;ENABLE_VR;ENABLE_AR;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_2_0_SUBSET;ENABLE_PROFILER;DEBUG;TRACE;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_NATIVE_ARRAY_CHECKS;UNITY_TEAM_LICENSE;ENABLE_VSTU;CROSS_PLATFORM_INPUT;WEATHER_MAKER_PRESENT</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="System" />
+    <Reference Include="System.XML" />
+    <Reference Include="System.Core" />
+    <Reference Include="Boo.Lang" />
+    <Reference Include="UnityScript.Lang" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="UnityEditor">
+      <HintPath>D:/Unity 2017.4.2/Editor/Data/Managed/UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine">
+      <HintPath>D:/Unity 2017.4.2/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CoreModule">
+      <HintPath>D:/Unity 2017.4.2/Editor/Data/Managed/UnityEngine/UnityEngine.CoreModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AccessibilityModule">
+      <HintPath>D:/Unity 2017.4.2/Editor/Data/Managed/UnityEngine/UnityEngine.AccessibilityModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ParticleSystemModule">
+      <HintPath>D:/Unity 2017.4.2/Editor/Data/Managed/UnityEngine/UnityEngine.ParticleSystemModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PhysicsModule">
+      <HintPath>D:/Unity 2017.4.2/Editor/Data/Managed/UnityEngine/UnityEngine.PhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VehiclesModule">
+      <HintPath>D:/Unity 2017.4.2/Editor/Data/Managed/UnityEngine/UnityEngine.VehiclesModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClothModule">
+      <HintPath>D:/Unity 2017.4.2/Editor/Data/Managed/UnityEngine/UnityEngine.ClothModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AIModule">
+      <HintPath>D:/Unity 2017.4.2/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AnimationModule">
+      <HintPath>D:/Unity 2017.4.2/Editor/Data/Managed/UnityEngine/UnityEngine.AnimationModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TextRenderingModule">
+      <HintPath>D:/Unity 2017.4.2/Editor/Data/Managed/UnityEngine/UnityEngine.TextRenderingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIModule">
+      <HintPath>D:/Unity 2017.4.2/Editor/Data/Managed/UnityEngine/UnityEngine.UIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainPhysicsModule">
+      <HintPath>D:/Unity 2017.4.2/Editor/Data/Managed/UnityEngine/UnityEngine.TerrainPhysicsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.IMGUIModule">
+      <HintPath>D:/Unity 2017.4.2/Editor/Data/Managed/UnityEngine/UnityEngine.IMGUIModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterInputModule">
+      <HintPath>D:/Unity 2017.4.2/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterInputModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ClusterRendererModule">
+      <HintPath>D:/Unity 2017.4.2/Editor/Data/Managed/UnityEngine/UnityEngine.ClusterRendererModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UNETModule">
+      <HintPath>D:/Unity 2017.4.2/Editor/Data/Managed/UnityEngine/UnityEngine.UNETModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.DirectorModule">
+      <HintPath>D:/Unity 2017.4.2/Editor/Data/Managed/UnityEngine/UnityEngine.DirectorModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityAnalyticsModule">
+      <HintPath>D:/Unity 2017.4.2/Editor/Data/Managed/UnityEngine/UnityEngine.UnityAnalyticsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.PerformanceReportingModule">
+      <HintPath>D:/Unity 2017.4.2/Editor/Data/Managed/UnityEngine/UnityEngine.PerformanceReportingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityConnectModule">
+      <HintPath>D:/Unity 2017.4.2/Editor/Data/Managed/UnityEngine/UnityEngine.UnityConnectModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.WebModule">
+      <HintPath>D:/Unity 2017.4.2/Editor/Data/Managed/UnityEngine/UnityEngine.WebModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ARModule">
+      <HintPath>D:/Unity 2017.4.2/Editor/Data/Managed/UnityEngine/UnityEngine.ARModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VRModule">
+      <HintPath>D:/Unity 2017.4.2/Editor/Data/Managed/UnityEngine/UnityEngine.VRModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIElementsModule">
+      <HintPath>D:/Unity 2017.4.2/Editor/Data/Managed/UnityEngine/UnityEngine.UIElementsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.StyleSheetsModule">
+      <HintPath>D:/Unity 2017.4.2/Editor/Data/Managed/UnityEngine/UnityEngine.StyleSheetsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AssetBundleModule">
+      <HintPath>D:/Unity 2017.4.2/Editor/Data/Managed/UnityEngine/UnityEngine.AssetBundleModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.AudioModule">
+      <HintPath>D:/Unity 2017.4.2/Editor/Data/Managed/UnityEngine/UnityEngine.AudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.CrashReportingModule">
+      <HintPath>D:/Unity 2017.4.2/Editor/Data/Managed/UnityEngine/UnityEngine.CrashReportingModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GameCenterModule">
+      <HintPath>D:/Unity 2017.4.2/Editor/Data/Managed/UnityEngine/UnityEngine.GameCenterModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GridModule">
+      <HintPath>D:/Unity 2017.4.2/Editor/Data/Managed/UnityEngine/UnityEngine.GridModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ImageConversionModule">
+      <HintPath>D:/Unity 2017.4.2/Editor/Data/Managed/UnityEngine/UnityEngine.ImageConversionModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.InputModule">
+      <HintPath>D:/Unity 2017.4.2/Editor/Data/Managed/UnityEngine/UnityEngine.InputModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.JSONSerializeModule">
+      <HintPath>D:/Unity 2017.4.2/Editor/Data/Managed/UnityEngine/UnityEngine.JSONSerializeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ParticlesLegacyModule">
+      <HintPath>D:/Unity 2017.4.2/Editor/Data/Managed/UnityEngine/UnityEngine.ParticlesLegacyModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Physics2DModule">
+      <HintPath>D:/Unity 2017.4.2/Editor/Data/Managed/UnityEngine/UnityEngine.Physics2DModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.ScreenCaptureModule">
+      <HintPath>D:/Unity 2017.4.2/Editor/Data/Managed/UnityEngine/UnityEngine.ScreenCaptureModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SharedInternalsModule">
+      <HintPath>D:/Unity 2017.4.2/Editor/Data/Managed/UnityEngine/UnityEngine.SharedInternalsModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteMaskModule">
+      <HintPath>D:/Unity 2017.4.2/Editor/Data/Managed/UnityEngine/UnityEngine.SpriteMaskModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpriteShapeModule">
+      <HintPath>D:/Unity 2017.4.2/Editor/Data/Managed/UnityEngine/UnityEngine.SpriteShapeModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TerrainModule">
+      <HintPath>D:/Unity 2017.4.2/Editor/Data/Managed/UnityEngine/UnityEngine.TerrainModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TilemapModule">
+      <HintPath>D:/Unity 2017.4.2/Editor/Data/Managed/UnityEngine/UnityEngine.TilemapModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestModule">
+      <HintPath>D:/Unity 2017.4.2/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestAudioModule">
+      <HintPath>D:/Unity 2017.4.2/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestTextureModule">
+      <HintPath>D:/Unity 2017.4.2/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UnityWebRequestWWWModule">
+      <HintPath>D:/Unity 2017.4.2/Editor/Data/Managed/UnityEngine/UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.VideoModule">
+      <HintPath>D:/Unity 2017.4.2/Editor/Data/Managed/UnityEngine/UnityEngine.VideoModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.WindModule">
+      <HintPath>D:/Unity 2017.4.2/Editor/Data/Managed/UnityEngine/UnityEngine.WindModule.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UI">
+      <HintPath>D:/Unity 2017.4.2/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Networking">
+      <HintPath>D:/Unity 2017.4.2/Editor/Data/UnityExtensions/Unity/Networking/UnityEngine.Networking.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.TestRunner">
+      <HintPath>D:/Unity 2017.4.2/Editor/Data/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework">
+      <HintPath>D:/Unity 2017.4.2/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Timeline">
+      <HintPath>D:/Unity 2017.4.2/Editor/Data/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.UIAutomation">
+      <HintPath>D:/Unity 2017.4.2/Editor/Data/UnityExtensions/Unity/UIAutomation/UnityEngine.UIAutomation.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.GoogleAudioSpatializer">
+      <HintPath>D:/Unity 2017.4.2/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.HoloLens">
+      <HintPath>D:/Unity 2017.4.2/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.SpatialTracking">
+      <HintPath>D:/Unity 2017.4.2/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
+    </Reference>
+    <Reference Include="CSG">
+      <HintPath>Assets/MeshMaker/Files/CSG/DLL/CSG.dll</HintPath>
+    </Reference>
+    <Reference Include="LOD">
+      <HintPath>Assets/MeshMaker/Files/LOD/DLL/LOD.dll</HintPath>
+    </Reference>
+    <Reference Include="Scripts">
+      <HintPath>Assets/MeshMaker/Scripts/Scripts.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Advertisements">
+      <HintPath>C:/ProgramData/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.4/UnityEngine.Advertisements.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Analytics">
+      <HintPath>C:/ProgramData/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.13/UnityEngine.Analytics.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.Purchasing">
+      <HintPath>C:/ProgramData/Unity/cache/packages/packages.unity.com/com.unity.purchasing@0.0.19/UnityEngine.Purchasing.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine.StandardEvents">
+      <HintPath>C:/ProgramData/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Hospital.Plugins.csproj">
+      <Project>{57ACE2FD-BD44-70AF-C942-6A101186FAD3}</Project>
+      <Name>Hospital.Plugins</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\_Scripts\Animointi testiscript.cs" />
+    <Compile Include="Assets\_Scripts\breakablelight.cs" />
+    <Compile Include="Assets\_Scripts\carManager.cs" />
+    <Compile Include="Assets\_Scripts\carManager2.cs" />
+    <Compile Include="Assets\_Scripts\crate.cs" />
+    <Compile Include="Assets\_Scripts\Daycycle.cs" />
+    <Compile Include="Assets\_Scripts\doorTrigger.cs" />
+    <Compile Include="Assets\_Scripts\doorTriggerLeft.cs" />
+    <Compile Include="Assets\_Scripts\doorTriggerRight.cs" />
+    <Compile Include="Assets\_Scripts\EnterVehicle.cs" />
+    <Compile Include="Assets\_Scripts\explosive.cs" />
+    <Compile Include="Assets\_Scripts\Ladder.cs" />
+    <Compile Include="Assets\_Scripts\Lightflicker.cs" />
+    <Compile Include="Assets\_Scripts\MoveTo.cs" />
+    <Compile Include="Assets\_Scripts\Patrol.cs" />
+    <Compile Include="Assets\_Scripts\RayCastDoor.cs" />
+    <Compile Include="Assets\_Scripts\RayCastDoorRemote.cs" />
+    <Compile Include="Assets\_Scripts\RayCastLift.cs" />
+    <Compile Include="Assets\_Scripts\RaycastSend.cs" />
+    <Compile Include="Assets\_Scripts\vanhat &amp; ei käytössä\DoorHandler.cs" />
+    <Compile Include="Assets\_Scripts\vanhat &amp; ei käytössä\RayCastDoorWANHA.cs" />
+    <Compile Include="Assets\_Scripts\Wander.cs" />
+    <Compile Include="Assets\AllStarCharacterLibray\Scripts\CamTarget.cs" />
+    <Compile Include="Assets\AllStarCharacterLibray\Scripts\CharacterDemoController.cs" />
+    <Compile Include="Assets\AllStarCharacterLibray\Scripts\MouseOrbit.cs" />
+    <Compile Include="Assets\AllStarCharacterLibray\Scripts\Outfitter.cs" />
+    <Compile Include="Assets\AllStarCharacterLibray\Scripts\RootMotionOff.cs" />
+    <Compile Include="Assets\AllStarCharacterLibray\Scripts\SkinnedMeshCombiner.cs" />
+    <Compile Include="Assets\DOOR SCRIPT\DEMO\MouseLook.cs" />
+    <Compile Include="Assets\DOOR SCRIPT\DEMO\PlayerMovement.cs" />
+    <Compile Include="Assets\DOOR SCRIPT\SCRIPTS\Detection.cs" />
+    <Compile Include="Assets\DOOR SCRIPT\SCRIPTS\Door.cs" />
+    <Compile Include="Assets\ELECTRONICS V.2\Script\AnimTexture.cs" />
+    <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
+    <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\Attributes\MinAttribute.cs" />
+    <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\Attributes\TrackballAttribute.cs" />
+    <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\Attributes\TrackballGroupAttribute.cs" />
+    <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\Components\AmbientOcclusionComponent.cs" />
+    <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\Components\BloomComponent.cs" />
+    <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\Components\BuiltinDebugViewsComponent.cs" />
+    <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\Components\ChromaticAberrationComponent.cs" />
+    <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\Components\ColorGradingComponent.cs" />
+    <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\Components\DepthOfFieldComponent.cs" />
+    <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\Components\DitheringComponent.cs" />
+    <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\Components\EyeAdaptationComponent.cs" />
+    <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\Components\FogComponent.cs" />
+    <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\Components\FxaaComponent.cs" />
+    <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\Components\GrainComponent.cs" />
+    <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\Components\MotionBlurComponent.cs" />
+    <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\Components\ScreenSpaceReflectionComponent.cs" />
+    <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\Components\TaaComponent.cs" />
+    <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\Components\UserLutComponent.cs" />
+    <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\Components\VignetteComponent.cs" />
+    <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\Models\AmbientOcclusionModel.cs" />
+    <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\Models\AntialiasingModel.cs" />
+    <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\Models\BloomModel.cs" />
+    <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\Models\BuiltinDebugViewsModel.cs" />
+    <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\Models\ChromaticAberrationModel.cs" />
+    <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\Models\ColorGradingModel.cs" />
+    <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\Models\DepthOfFieldModel.cs" />
+    <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\Models\DitheringModel.cs" />
+    <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\Models\EyeAdaptationModel.cs" />
+    <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\Models\FogModel.cs" />
+    <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\Models\GrainModel.cs" />
+    <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\Models\MotionBlurModel.cs" />
+    <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\Models\ScreenSpaceReflectionModel.cs" />
+    <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\Models\UserLutModel.cs" />
+    <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\Models\VignetteModel.cs" />
+    <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\PostProcessingBehaviour.cs" />
+    <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\PostProcessingComponent.cs" />
+    <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\PostProcessingContext.cs" />
+    <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\PostProcessingModel.cs" />
+    <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\PostProcessingProfile.cs" />
+    <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\Utils\ColorGradingCurve.cs" />
+    <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\Utils\GraphicsUtils.cs" />
+    <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\Utils\MaterialFactory.cs" />
+    <Compile Include="Assets\Flooded_Grounds\PostProcessing\Runtime\Utils\RenderTextureFactory.cs" />
+    <Compile Include="Assets\Flooded_Grounds\PostProcessing\Utilities\CustomMotionTexture\ExampleWheelController.cs" />
+    <Compile Include="Assets\Flooded_Grounds\Scripts\DisableRenderer.cs" />
+    <Compile Include="Assets\Flooded_Grounds\Scripts\FPSController\CharController_Motor.cs" />
+    <Compile Include="Assets\Flooded_Grounds\Scripts\FPSDisplay.cs" />
+    <Compile Include="Assets\Flooded_Grounds\Scripts\WaterFloat.cs" />
+    <Compile Include="Assets\FPS test\scripts\explosionForce.cs" />
+    <Compile Include="Assets\FPS test\scripts\ImpactAudio.cs" />
+    <Compile Include="Assets\FPS test\scripts\playrandomsound.cs" />
+    <Compile Include="Assets\FPS test\scripts\waitAndDestroy.cs" />
+    <Compile Include="Assets\FPSHangar\_Source\Script\RoomWanderer.cs" />
+    <Compile Include="Assets\FPSHangar\_Source\VolumetricLight\VolumetricLight.cs" />
+    <Compile Include="Assets\FPSHangar\_Source\VolumetricLight\VolumetricLightSet.cs" />
+    <Compile Include="Assets\FPSHangar\Tutorial1\Scripts\AutoIntensity.cs" />
+    <Compile Include="Assets\FPSHangar\Tutorial1\Scripts\SetSunLight.cs" />
+    <Compile Include="Assets\General Textures\scripts\SmoothCamRot.cs" />
+    <Compile Include="Assets\MBCP\Demo\DemoFPSPlayer.cs" />
+    <Compile Include="Assets\MBCP\Source\Scripts\Door_LOD_adjuster.cs" />
+    <Compile Include="Assets\MBCP\Source\Scripts\Elevator.cs" />
+    <Compile Include="Assets\MBCP\Source\Scripts\ElevatorExit.cs" />
+    <Compile Include="Assets\Melee Axe Pack\Demo\CameraScroll.cs" />
+    <Compile Include="Assets\MeshMaker\Addons\First Person Drifter Controller\Scripts\FirstPersonDrifter.cs" />
+    <Compile Include="Assets\MeshMaker\Addons\First Person Drifter Controller\Scripts\LockMouse.cs" />
+    <Compile Include="Assets\MeshMaker\Addons\First Person Drifter Controller\Scripts\MouseLook.cs" />
+    <Compile Include="Assets\MeshMaker\Addons\First Person Drifter Controller\Scripts\Optional\CameraFadeOnStart.cs" />
+    <Compile Include="Assets\MeshMaker\Addons\First Person Drifter Controller\Scripts\Optional\CameraZoom.cs" />
+    <Compile Include="Assets\MeshMaker\Addons\First Person Drifter Controller\Scripts\Optional\CheckIfBelowLevel.cs" />
+    <Compile Include="Assets\MeshMaker\Addons\First Person Drifter Controller\Scripts\Optional\HeadBob.cs" />
+    <Compile Include="Assets\MeshMaker\Addons\First Person Drifter Controller\Scripts\Utils\CameraFade.cs" />
+    <Compile Include="Assets\MeshMaker\Files\LevelEditor\Scripts\FreezeObject.cs" />
+    <Compile Include="Assets\MeshMaker\Files\LevelEditor\Scripts\LevelEditorGizmos.cs" />
+    <Compile Include="Assets\MeshMaker\Files\MeshEditor\Scripts\MeshEditorGizmos.cs" />
+    <Compile Include="Assets\Modern Doors Pack\Scripts\AutoDoor.cs" />
+    <Compile Include="Assets\Modern Doors Pack\Scripts\BasicDoor.cs" />
+    <Compile Include="Assets\Modern Doors Pack\Scripts\DoubleAutoDoor.cs" />
+    <Compile Include="Assets\Modern Doors Pack\Scripts\DoubleDoor.cs" />
+    <Compile Include="Assets\Modern Doors Pack\Scripts\Key.cs" />
+    <Compile Include="Assets\Modern Doors Pack\Scripts\Keyring.cs" />
+    <Compile Include="Assets\Modern Doors Pack\Scripts\LockedDoor.cs" />
+    <Compile Include="Assets\Modern Doors Pack\Scripts\TrapDoor.cs" />
+    <Compile Include="Assets\pickup 1980\effects\FXAA\Scripts\FXAA.cs" />
+    <Compile Include="Assets\pickup 1980\effects\FXAA\Scripts\FXAAPostEffectsBase.cs" />
+    <Compile Include="Assets\pickup\scripts\AudioControl.cs" />
+    <Compile Include="Assets\pickup\scripts\cameraControl.cs" />
+    <Compile Include="Assets\pickup\scripts\car.cs" />
+    <Compile Include="Assets\pickup\scripts\carCamera.cs" />
+    <Compile Include="Assets\pickup\scripts\collisionSound.cs" />
+    <Compile Include="Assets\pickup\scripts\destroyAfter.cs" />
+    <Compile Include="Assets\pickup\scripts\GearBox.cs" />
+    <Compile Include="Assets\pickup\scripts\hands.cs" />
+    <Compile Include="Assets\pickup\scripts\help.cs" />
+    <Compile Include="Assets\pickup\scripts\skidMarks.cs" />
+    <Compile Include="Assets\RFPSP\Image Effects\Environment\Water (Basic)\Scripts\WaterBasic.cs" />
+    <Compile Include="Assets\RFPSP\Image Effects\Scripts\Antialiasing.cs" />
+    <Compile Include="Assets\RFPSP\Image Effects\Scripts\Bloom.cs" />
+    <Compile Include="Assets\RFPSP\Image Effects\Scripts\BloomAndFlares.cs" />
+    <Compile Include="Assets\RFPSP\Image Effects\Scripts\BloomOptimized.cs" />
+    <Compile Include="Assets\RFPSP\Image Effects\Scripts\Blur.cs" />
+    <Compile Include="Assets\RFPSP\Image Effects\Scripts\BlurOptimized.cs" />
+    <Compile Include="Assets\RFPSP\Image Effects\Scripts\CameraMotionBlur.cs" />
+    <Compile Include="Assets\RFPSP\Image Effects\Scripts\ColorCorrectionCurves.cs" />
+    <Compile Include="Assets\RFPSP\Image Effects\Scripts\ColorCorrectionLookup.cs" />
+    <Compile Include="Assets\RFPSP\Image Effects\Scripts\ColorCorrectionRamp.cs" />
+    <Compile Include="Assets\RFPSP\Image Effects\Scripts\ContrastEnhance.cs" />
+    <Compile Include="Assets\RFPSP\Image Effects\Scripts\ContrastStretch.cs" />
+    <Compile Include="Assets\RFPSP\Image Effects\Scripts\CreaseShading.cs" />
+    <Compile Include="Assets\RFPSP\Image Effects\Scripts\DepthOfField.cs" />
+    <Compile Include="Assets\RFPSP\Image Effects\Scripts\DepthOfFieldDeprecated.cs" />
+    <Compile Include="Assets\RFPSP\Image Effects\Scripts\EdgeDetection.cs" />
+    <Compile Include="Assets\RFPSP\Image Effects\Scripts\Fisheye.cs" />
+    <Compile Include="Assets\RFPSP\Image Effects\Scripts\GlobalFog.cs" />
+    <Compile Include="Assets\RFPSP\Image Effects\Scripts\Grayscale.cs" />
+    <Compile Include="Assets\RFPSP\Image Effects\Scripts\ImageEffectBase.cs" />
+    <Compile Include="Assets\RFPSP\Image Effects\Scripts\ImageEffects.cs" />
+    <Compile Include="Assets\RFPSP\Image Effects\Scripts\MotionBlur.cs" />
+    <Compile Include="Assets\RFPSP\Image Effects\Scripts\NoiseAndGrain.cs" />
+    <Compile Include="Assets\RFPSP\Image Effects\Scripts\NoiseAndScratches.cs" />
+    <Compile Include="Assets\RFPSP\Image Effects\Scripts\PostEffectsBase.cs" />
+    <Compile Include="Assets\RFPSP\Image Effects\Scripts\PostEffectsHelper.cs" />
+    <Compile Include="Assets\RFPSP\Image Effects\Scripts\Quads.cs" />
+    <Compile Include="Assets\RFPSP\Image Effects\Scripts\ScreenOverlay.cs" />
+    <Compile Include="Assets\RFPSP\Image Effects\Scripts\ScreenSpaceAmbientObscurance.cs" />
+    <Compile Include="Assets\RFPSP\Image Effects\Scripts\ScreenSpaceAmbientOcclusion.cs" />
+    <Compile Include="Assets\RFPSP\Image Effects\Scripts\SepiaTone.cs" />
+    <Compile Include="Assets\RFPSP\Image Effects\Scripts\SunShafts.cs" />
+    <Compile Include="Assets\RFPSP\Image Effects\Scripts\TiltShift.cs" />
+    <Compile Include="Assets\RFPSP\Image Effects\Scripts\Tonemapping.cs" />
+    <Compile Include="Assets\RFPSP\Image Effects\Scripts\Triangles.cs" />
+    <Compile Include="Assets\RFPSP\Image Effects\Scripts\Twirl.cs" />
+    <Compile Include="Assets\RFPSP\Image Effects\Scripts\VignetteAndChromaticAberration.cs" />
+    <Compile Include="Assets\RFPSP\Image Effects\Scripts\Vortex.cs" />
+    <Compile Include="Assets\RFPSP\Scripts\AI\AI.cs" />
+    <Compile Include="Assets\RFPSP\Scripts\AI\CharacterDamage.cs" />
+    <Compile Include="Assets\RFPSP\Scripts\AI\LocationDamage.cs" />
+    <Compile Include="Assets\RFPSP\Scripts\AI\MonsterItemTrap.cs" />
+    <Compile Include="Assets\RFPSP\Scripts\AI\MonsterTrigger.cs" />
+    <Compile Include="Assets\RFPSP\Scripts\AI\MoveTrigger.cs" />
+    <Compile Include="Assets\RFPSP\Scripts\AI\NPCAttack.cs" />
+    <Compile Include="Assets\RFPSP\Scripts\AI\NPCRegistry.cs" />
+    <Compile Include="Assets\RFPSP\Scripts\AI\NPCSpawner.cs" />
+    <Compile Include="Assets\RFPSP\Scripts\AI\RemoveBody.cs" />
+    <Compile Include="Assets\RFPSP\Scripts\AI\WaveManager.cs" />
+    <Compile Include="Assets\RFPSP\Scripts\AI\WaypointGroup.cs" />
+    <Compile Include="Assets\RFPSP\Scripts\Camera\CamAndWeapAnims.cs" />
+    <Compile Include="Assets\RFPSP\Scripts\Camera\CameraControl.cs" />
+    <Compile Include="Assets\RFPSP\Scripts\Camera\DragRigidbody.cs" />
+    <Compile Include="Assets\RFPSP\Scripts\Camera\HorizontalBob.cs" />
+    <Compile Include="Assets\RFPSP\Scripts\Camera\MovePlayerAndCamera.cs" />
+    <Compile Include="Assets\RFPSP\Scripts\Camera\PlayAudioAtPos.cs" />
+    <Compile Include="Assets\RFPSP\Scripts\Camera\SmoothMouseLook.cs" />
+    <Compile Include="Assets\RFPSP\Scripts\Camera\TempAudioTimer.cs" />
+    <Compile Include="Assets\RFPSP\Scripts\Camera\VerticalBob.cs" />
+    <Compile Include="Assets\RFPSP\Scripts\Effects\FadeOutDecals.cs" />
+    <Compile Include="Assets\RFPSP\Scripts\Effects\LevelLoadFade.cs" />
+    <Compile Include="Assets\RFPSP\Scripts\Effects\PainFade.cs" />
+    <Compile Include="Assets\RFPSP\Scripts\Effects\WeaponEffects.cs" />
+    <Compile Include="Assets\RFPSP\Scripts\HUD\AmmoText.cs" />
+    <Compile Include="Assets\RFPSP\Scripts\HUD\HealthText.cs" />
+    <Compile Include="Assets\RFPSP\Scripts\HUD\HelpText.cs" />
+    <Compile Include="Assets\RFPSP\Scripts\HUD\HungerText.cs" />
+    <Compile Include="Assets\RFPSP\Scripts\HUD\MainMenu.cs" />
+    <Compile Include="Assets\RFPSP\Scripts\HUD\ThirstText.cs" />
+    <Compile Include="Assets\RFPSP\Scripts\HUD\WarmupText.cs" />
+    <Compile Include="Assets\RFPSP\Scripts\HUD\WaveText.cs" />
+    <Compile Include="Assets\RFPSP\Scripts\Items\AmmoPickup.cs" />
+    <Compile Include="Assets\RFPSP\Scripts\Items\AppleFall.cs" />
+    <Compile Include="Assets\RFPSP\Scripts\Items\DrinkPickup.cs" />
+    <Compile Include="Assets\RFPSP\Scripts\Items\FoodPickup.cs" />
+    <Compile Include="Assets\RFPSP\Scripts\Items\HealthPickup.cs" />
+    <Compile Include="Assets\RFPSP\Scripts\Items\WeaponPickup.cs" />
+    <Compile Include="Assets\RFPSP\Scripts\Items\WeaponSpawn.cs" />
+    <Compile Include="Assets\RFPSP\Scripts\Objects\!Climbing\EdgeClimbTrigger.cs" />
+    <Compile Include="Assets\RFPSP\Scripts\Objects\!Climbing\EdgeClimbTriggerActivate.cs" />
+    <Compile Include="Assets\RFPSP\Scripts\Objects\!Destructibles\BreakableObject.cs" />
+    <Compile Include="Assets\RFPSP\Scripts\Objects\!Destructibles\ExplosiveObject.cs" />
+    <Compile Include="Assets\RFPSP\Scripts\Objects\!Destructibles\MineExplosion.cs" />
+    <Compile Include="Assets\RFPSP\Scripts\Objects\!Platforms\ElevatorCrushCollider.cs" />
+    <Compile Include="Assets\RFPSP\Scripts\Objects\!Platforms\MovingElevator.cs" />
+    <Compile Include="Assets\RFPSP\Scripts\Objects\!Platforms\MovingPlatform.cs" />
+    <Compile Include="Assets\RFPSP\Scripts\Objects\AzuObjectPool.cs" />
+    <Compile Include="Assets\RFPSP\Scripts\Objects\DamageZone.cs" />
+    <Compile Include="Assets\RFPSP\Scripts\Objects\FenceRustle.cs" />
+    <Compile Include="Assets\RFPSP\Scripts\Objects\FoliageRustle.cs" />
+    <Compile Include="Assets\RFPSP\Scripts\Objects\InstantDeathCollider.cs" />
+    <Compile Include="Assets\RFPSP\Scripts\Objects\WaterZone.cs" />
+    <Compile Include="Assets\RFPSP\Scripts\Objects\WorldRecenter.cs" />
+    <Compile Include="Assets\RFPSP\Scripts\Player\Footsteps.cs" />
+    <Compile Include="Assets\RFPSP\Scripts\Player\FPSPlayer.cs" />
+    <Compile Include="Assets\RFPSP\Scripts\Player\FPSRigidBodyWalker.cs" />
+    <Compile Include="Assets\RFPSP\Scripts\Player\InputControl.cs" />
+    <Compile Include="Assets\RFPSP\Scripts\Player\LeanColliderDamage.cs" />
+    <Compile Include="Assets\RFPSP\Scripts\Player\ReconfigurePrefab.cs" />
+    <Compile Include="Assets\RFPSP\Scripts\Player\VisibleBody.cs" />
+    <Compile Include="Assets\RFPSP\Scripts\Weapons\ArrowObject.cs" />
+    <Compile Include="Assets\RFPSP\Scripts\Weapons\GrenadeObject.cs" />
+    <Compile Include="Assets\RFPSP\Scripts\Weapons\GunSway.cs" />
+    <Compile Include="Assets\RFPSP\Scripts\Weapons\Ironsights.cs" />
+    <Compile Include="Assets\RFPSP\Scripts\Weapons\PlayerWeapons.cs" />
+    <Compile Include="Assets\RFPSP\Scripts\Weapons\ShellEjection.cs" />
+    <Compile Include="Assets\RFPSP\Scripts\Weapons\WeaponBehavior.cs" />
+    <Compile Include="Assets\RFPSP\Scripts\Weapons\WeaponPivot.cs" />
+    <Compile Include="Assets\SampleScenes\Menu\Scripts\MenuSceneLoader.cs" />
+    <Compile Include="Assets\SampleScenes\Menu\Scripts\PauseMenu.cs" />
+    <Compile Include="Assets\SampleScenes\Menu\Scripts\SceneAndURLLoader.cs" />
+    <Compile Include="Assets\SampleScenes\Scripts\CameraSwitch.cs" />
+    <Compile Include="Assets\SampleScenes\Scripts\LevelReset.cs" />
+    <Compile Include="Assets\SampleScenes\Scripts\ParticleSceneControls.cs" />
+    <Compile Include="Assets\SampleScenes\Scripts\PlaceTargetWithMouse.cs" />
+    <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
+    <Compile Include="Assets\Station v1\Script\Stan_M1_Anim.cs" />
+    <Compile Include="Assets\TheGamingPeople\Scripts\CameraController.cs" />
+    <Compile Include="Assets\WeatherMaker\Demo\DemoResources\Scripts\WeatherMakerDemoAnimateMoveScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Demo\DemoResources\Scripts\WeatherMakerDemoReflectionProbeScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Demo\DemoResources\Scripts\WeatherMakerDemoScript2D.cs" />
+    <Compile Include="Assets\WeatherMaker\Demo\DemoResources\Scripts\WeatherMakerDemoScriptCloudMask.cs" />
+    <Compile Include="Assets\WeatherMaker\Demo\DemoResources\Scripts\WeatherMakerDemoScriptRotateYScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Demo\DemoResources\Scripts\WeatherMakerDemoScriptSpotlightRotate.cs" />
+    <Compile Include="Assets\WeatherMaker\Demo\DemoResources\Scripts\WeatherMakerLightToSunIntensityScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\ScriptableRenderPipeline\HDRP\WeatherMakerHDRPCustomPass.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\ScriptableRenderPipeline\URP\WeatherMakerURPRenderFeatureScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Clouds\WeatherMakerCloudLayerProfileScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Clouds\WeatherMakerCloudNoiseGeneratorScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Clouds\WeatherMakerCloudNoiseProfileGroupScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Clouds\WeatherMakerCloudNoiseProfileScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Clouds\WeatherMakerCloudProbeScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Clouds\WeatherMakerCloudProfileScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Clouds\WeatherMakerCloudVolumetricProfileScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Clouds\WeatherMakerFullScreenCloudsScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Clouds\WeatherMakerLegacyCloudScript2D.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Extensions\WeatherMakerExtensionAquasScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Extensions\WeatherMakerExtensionCtsScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Extensions\WeatherMakerExtensionGaiaScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Extensions\WeatherMakerExtensionMegaSplatScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Extensions\WeatherMakerExtensionMicroSplatScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Extensions\WeatherMakerExtensionPlaymakerScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Extensions\WeatherMakerExtensionRainSnowSeasonScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Extensions\WeatherMakerExtensionRtpTerrainScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Extensions\WeatherMakerExtensionScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Extensions\WeatherMakerExtensionUberScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Extensions\WeatherMakerExtensionVegetationStudioProScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Extensions\WeatherMakerExtensionWaterScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Extensions\WeatherMakerExtensionWorldManagerScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Extensions\WeatherMakerMirrorNetworkScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Fog\WeatherMakerBoxFogScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Fog\WeatherMakerFogProfileScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Fog\WeatherMakerFogScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Fog\WeatherMakerFullScreenFogProfileScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Fog\WeatherMakerFullScreenFogScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Fog\WeatherMakerSphereFogScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Manager\WeatherMakerAudioManagerScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Manager\WeatherMakerAuroraManagerScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Manager\WeatherMakerCloudManager2DScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Manager\WeatherMakerCloudManagerScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Manager\WeatherMakerCommandBufferManagerScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Manager\WeatherMakerConfigurationScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Manager\WeatherMakerEditorUtility.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Manager\WeatherMakerFogManagerScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Manager\WeatherMakerFullScreenEffect.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Manager\WeatherMakerIsPlayerScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Manager\WeatherMakerLightManagerScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Manager\WeatherMakerLightningGenerator.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Manager\WeatherMakerLocationWeatherScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Manager\WeatherMakerPlayerControllerScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Manager\WeatherMakerPlayerSoundManagerScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Manager\WeatherMakerPrecipitationManagerScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Manager\WeatherMakerScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Manager\WeatherMakerShadowMapScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Manager\WeatherMakerSkyManagerScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Manager\WeatherMakerThunderAndLightningManagerScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Manager\WeatherMakerTweenScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Manager\WeatherMakerWindManagerScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Mesh\WeatherMakerConeCreator.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Mesh\WeatherMakerPlaneCreatorScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Mesh\WeatherMakerSphereCreator.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Mesh\WeatherMakerSphereCreatorScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Other\WeatherMakerGeometryUtility.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Other\WeatherMakerGradientHelperScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Other\WeatherMakerMaterialCopy.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Other\WeatherMakerNetworkPlayerScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Other\WeatherMakerOffScreenBufferScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Other\WeatherMakerParticleSortScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Other\WeatherMakerPerformanceProfileScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Other\WeatherMakerPlanarReflectionScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Other\WeatherMakerResourceContainerScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Other\WeatherMakerScreenshotScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Other\WeatherMakerShaderIds.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Other\WeatherMakerShaderPropertiesScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Other\WeatherMakerTemporalReprojectionStateScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Sky\WeatherMakerAtmosphereProfileScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Sky\WeatherMakerAuroraProfileScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Sky\WeatherMakerCelestialObjectScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Sky\WeatherMakerDayNightCycleManagerScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Sky\WeatherMakerDayNightCycleProfileScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Sky\WeatherMakerMeteorShowerProfileScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Sky\WeatherMakerMeteorShowerScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Sky\WeatherMakerSkyPlaneScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Sky\WeatherMakerSkyProfileScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Sky\WeatherMakerSkySphereScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Sound\WeatherMakerLoopingAudioSource.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Sound\WeatherMakerSoundGroupScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Sound\WeatherMakerSoundProfileScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Sound\WeatherMakerSoundScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Sound\WeatherMakerSoundZoneScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Water\WeatherMakerDepthCameraScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Water\WeatherMakerReflectionScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Water\WeatherMakerWaterProfileScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Water\WeatherMakerWaterScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Weather\WeatherMakerBaseScriptableObjectScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Weather\WeatherMakerDampeningZoneScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Weather\WeatherMakerFallingParticleScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Weather\WeatherMakerFallingParticleScript2D.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Weather\WeatherMakerFallingParticleScript3D.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Weather\WeatherMakerFullScreenOverlayScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Weather\WeatherMakerFullScreenSnowOverlayScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Weather\WeatherMakerFullScreenWetnessOverlayScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Weather\WeatherMakerLightningBoltDataStructures.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Weather\WeatherMakerLightningBoltPrefabScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Weather\WeatherMakerLightningBoltScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Weather\WeatherMakerLightningProfileScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Weather\WeatherMakerNullZoneProfile.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Weather\WeatherMakerNullZoneScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Weather\WeatherMakerOverlayProfileScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Weather\WeatherMakerParticleCollisionScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Weather\WeatherMakerPrecipitationProfileScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Weather\WeatherMakerProfileGroupScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Weather\WeatherMakerProfileScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Weather\WeatherMakerThunderAndLightningScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Weather\WeatherMakerThunderAndLightningScript2D.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Weather\WeatherMakerThunderAndLightningScript3D.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Weather\WeatherMakerWeatherZoneScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Weather\WeatherMakerWetnessOverlayProfileScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Weather\WeatherMakerWindProfileScript.cs" />
+    <Compile Include="Assets\WeatherMaker\Prefab\Scripts\Weather\WeatherMakerWindScript.cs" />
+    <Compile Include="Assets\WeatherMaker\ThirdParty\HydraulicErosion\Scripts\Erosion.cs" />
+    <Compile Include="Assets\WeatherMaker\ThirdParty\HydraulicErosion\Scripts\HeightMapGenerator.cs" />
+    <Compile Include="Assets\WeatherMaker\ThirdParty\HydraulicErosion\Scripts\TerrainGenerator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Assets\AdventureForge\CabinetsAndShelvesReadme.txt" />
+    <None Include="Assets\Barrels\Set_1\README.txt" />
+    <None Include="Assets\Boats\Read me.txt" />
+    <None Include="Assets\FPS Builder\Environment Pack\Shaders\FXWaterPro.shader" />
+    <None Include="Assets\FPS test\environment\customTrees\Materials\TreeCreatorLeavesFastOptimized.shader" />
+    <None Include="Assets\FPS test\environment\skyshader1.0\mysky.shader" />
+    <None Include="Assets\FPS test\shaders\snowTop.shader" />
+    <None Include="Assets\FPSHangar\_Source\VolumetricLight\VolumetricLight.shader" />
+    <None Include="Assets\FPSHangar\_Source\VolumetricLight\VolumetricLightDe.shader" />
+    <None Include="Assets\FirstPersonHands\FirstPersonHands_notes.txt" />
+    <None Include="Assets\FirstPersonHands\MixerShader\ASE_MixerShader.shader" />
+    <None Include="Assets\Flooded_Grounds\Content\Shaders\FG_PBR_TopBlend.shader" />
+    <None Include="Assets\Flooded_Grounds\Content\Shaders\FG_PBR_Water.shader" />
+    <None Include="Assets\Flooded_Grounds\Content\Shaders\FG_Skybox_Rotating.shader" />
+    <None Include="Assets\Flooded_Grounds\Content\Shaders\FG_Triplanar_BumpSpec.shader" />
+    <None Include="Assets\Flooded_Grounds\PostProcessing\Editor Resources\Monitors\HistogramCompute.compute" />
+    <None Include="Assets\Flooded_Grounds\PostProcessing\Editor Resources\Monitors\HistogramRender.shader" />
+    <None Include="Assets\Flooded_Grounds\PostProcessing\Editor Resources\Monitors\ParadeRender.shader" />
+    <None Include="Assets\Flooded_Grounds\PostProcessing\Editor Resources\Monitors\VectorscopeCompute.compute" />
+    <None Include="Assets\Flooded_Grounds\PostProcessing\Editor Resources\Monitors\VectorscopeRender.shader" />
+    <None Include="Assets\Flooded_Grounds\PostProcessing\Editor Resources\Monitors\WaveformCompute.compute" />
+    <None Include="Assets\Flooded_Grounds\PostProcessing\Editor Resources\Monitors\WaveformRender.shader" />
+    <None Include="Assets\Flooded_Grounds\PostProcessing\Editor Resources\UI\CurveBackground.shader" />
+    <None Include="Assets\Flooded_Grounds\PostProcessing\Editor Resources\UI\Trackball.shader" />
+    <None Include="Assets\Flooded_Grounds\PostProcessing\Resources\Bluenoise64\COPYING.txt" />
+    <None Include="Assets\Flooded_Grounds\PostProcessing\Resources\Bluenoise64\LICENSE.txt" />
+    <None Include="Assets\Flooded_Grounds\PostProcessing\Resources\Shaders\ACES.cginc" />
+    <None Include="Assets\Flooded_Grounds\PostProcessing\Resources\Shaders\AmbientOcclusion.cginc" />
+    <None Include="Assets\Flooded_Grounds\PostProcessing\Resources\Shaders\AmbientOcclusion.shader" />
+    <None Include="Assets\Flooded_Grounds\PostProcessing\Resources\Shaders\Blit.shader" />
+    <None Include="Assets\Flooded_Grounds\PostProcessing\Resources\Shaders\Bloom.cginc" />
+    <None Include="Assets\Flooded_Grounds\PostProcessing\Resources\Shaders\Bloom.shader" />
+    <None Include="Assets\Flooded_Grounds\PostProcessing\Resources\Shaders\BuiltinDebugViews.shader" />
+    <None Include="Assets\Flooded_Grounds\PostProcessing\Resources\Shaders\ColorGrading.cginc" />
+    <None Include="Assets\Flooded_Grounds\PostProcessing\Resources\Shaders\Common.cginc" />
+    <None Include="Assets\Flooded_Grounds\PostProcessing\Resources\Shaders\DepthOfField.cginc" />
+    <None Include="Assets\Flooded_Grounds\PostProcessing\Resources\Shaders\DepthOfField.shader" />
+    <None Include="Assets\Flooded_Grounds\PostProcessing\Resources\Shaders\DiskKernels.cginc" />
+    <None Include="Assets\Flooded_Grounds\PostProcessing\Resources\Shaders\EyeAdaptation.cginc" />
+    <None Include="Assets\Flooded_Grounds\PostProcessing\Resources\Shaders\EyeAdaptation.shader" />
+    <None Include="Assets\Flooded_Grounds\PostProcessing\Resources\Shaders\EyeHistogram.compute" />
+    <None Include="Assets\Flooded_Grounds\PostProcessing\Resources\Shaders\FXAA.shader" />
+    <None Include="Assets\Flooded_Grounds\PostProcessing\Resources\Shaders\FXAA3.cginc" />
+    <None Include="Assets\Flooded_Grounds\PostProcessing\Resources\Shaders\Fog.shader" />
+    <None Include="Assets\Flooded_Grounds\PostProcessing\Resources\Shaders\GrainGen.shader" />
+    <None Include="Assets\Flooded_Grounds\PostProcessing\Resources\Shaders\LutGen.shader" />
+    <None Include="Assets\Flooded_Grounds\PostProcessing\Resources\Shaders\MotionBlur.cginc" />
+    <None Include="Assets\Flooded_Grounds\PostProcessing\Resources\Shaders\MotionBlur.shader" />
+    <None Include="Assets\Flooded_Grounds\PostProcessing\Resources\Shaders\ScreenSpaceRaytrace.cginc" />
+    <None Include="Assets\Flooded_Grounds\PostProcessing\Resources\Shaders\ScreenSpaceReflection.shader" />
+    <None Include="Assets\Flooded_Grounds\PostProcessing\Resources\Shaders\TAA.cginc" />
+    <None Include="Assets\Flooded_Grounds\PostProcessing\Resources\Shaders\TAA.shader" />
+    <None Include="Assets\Flooded_Grounds\PostProcessing\Resources\Shaders\Tonemapping.cginc" />
+    <None Include="Assets\Flooded_Grounds\PostProcessing\Resources\Shaders\Uber.shader" />
+    <None Include="Assets\Flooded_Grounds\PostProcessing\Resources\Shaders\UberSecondPass.cginc" />
+    <None Include="Assets\Flooded_Grounds\PostProcessing\Utilities\CustomMotionTexture\Shaders\CustomMotionVectorTexture.shader" />
+    <None Include="Assets\Flooded_Grounds\Resources\TreeCreator\TreeCreatorBark.shader" />
+    <None Include="Assets\Flooded_Grounds\Resources\TreeCreator\TreeCreatorBarkOptimized.shader" />
+    <None Include="Assets\Flooded_Grounds\Resources\TreeCreator\TreeCreatorLeaves.shader" />
+    <None Include="Assets\Flooded_Grounds\Resources\TreeCreator\TreeCreatorLeavesOptimized.shader" />
+    <None Include="Assets\Flooded_Grounds\Resources\WavingGrass.shader" />
+    <None Include="Assets\HQ Old Books\readme.txt" />
+    <None Include="Assets\Hydropower_station\readme.txt" />
+    <None Include="Assets\Industrial Tanks\Info.txt" />
+    <None Include="Assets\Industry Props Pack 4\Shader\Base.shader" />
+    <None Include="Assets\Industry Props Pack 4\Shader\Glass.shader" />
+    <None Include="Assets\Locker_room_props\readme.txt" />
+    <None Include="Assets\MBCP\Assembly guide.txt" />
+    <None Include="Assets\MBCP\Readme.txt" />
+    <None Include="Assets\MeshMaker\Addons\First Person Drifter Controller\info.txt" />
+    <None Include="Assets\MeshMaker\Brushes\Start Brushes\Example Brush.xml" />
+    <None Include="Assets\MeshMaker\Designs\Designs.txt" />
+    <None Include="Assets\MeshMaker\Documentation\readme.txt" />
+    <None Include="Assets\MeshMaker\Exported Objects\Exported Objects.txt" />
+    <None Include="Assets\MeshMaker\Files\Isosurface\Data\formulas.txt" />
+    <None Include="Assets\MeshMaker\Files\LOD\UndoRedo\UndoRedo.txt" />
+    <None Include="Assets\MeshMaker\Files\LevelEditor\Shaders\Back Side.shader" />
+    <None Include="Assets\MeshMaker\Files\LevelEditor\Shaders\Front Side.shader" />
+    <None Include="Assets\MeshMaker\Files\LevelEditor\Shaders\customWire.shader" />
+    <None Include="Assets\MeshMaker\Files\LevelEditor\Shaders\customWire5_5.shader" />
+    <None Include="Assets\MeshMaker\Files\LevelEditor\Shaders\customWireDotted.shader" />
+    <None Include="Assets\MeshMaker\Files\LevelEditor\Shaders\customWireDotted5_5.shader" />
+    <None Include="Assets\MeshMaker\Files\LevelEditor\UndoRedo\UndoRedo.txt" />
+    <None Include="Assets\MeshMaker\Files\LevelEditor\UndoRedo\undoredosave.xml" />
+    <None Include="Assets\MeshMaker\Files\Shaders\Alpha-Glossy -Glass.shader" />
+    <None Include="Assets\MeshMaker\Files\Shaders\GizmoShader.shader" />
+    <None Include="Assets\MeshMaker\Files\Shaders\Transparent.shader" />
+    <None Include="Assets\MeshMaker\Frameworks\Shapes\Circle.xml" />
+    <None Include="Assets\MeshMaker\Frameworks\Shapes\Decagon.xml" />
+    <None Include="Assets\MeshMaker\Frameworks\Shapes\Ellipse.xml" />
+    <None Include="Assets\MeshMaker\Frameworks\Shapes\Equilateral Triangle.xml" />
+    <None Include="Assets\MeshMaker\Frameworks\Shapes\Heptagon.xml" />
+    <None Include="Assets\MeshMaker\Frameworks\Shapes\Hexagon.xml" />
+    <None Include="Assets\MeshMaker\Frameworks\Shapes\Isosceles Triangle.xml" />
+    <None Include="Assets\MeshMaker\Frameworks\Shapes\Kite.xml" />
+    <None Include="Assets\MeshMaker\Frameworks\Shapes\Nonagon.xml" />
+    <None Include="Assets\MeshMaker\Frameworks\Shapes\Octagon.xml" />
+    <None Include="Assets\MeshMaker\Frameworks\Shapes\Parallelogram.xml" />
+    <None Include="Assets\MeshMaker\Frameworks\Shapes\Pentagon.xml" />
+    <None Include="Assets\MeshMaker\Frameworks\Shapes\Rectangle.xml" />
+    <None Include="Assets\MeshMaker\Frameworks\Shapes\Rhombus.xml" />
+    <None Include="Assets\MeshMaker\Frameworks\Shapes\Right Angle Triangle.xml" />
+    <None Include="Assets\MeshMaker\Frameworks\Shapes\Scalene Triangle.xml" />
+    <None Include="Assets\MeshMaker\Frameworks\Shapes\Square.xml" />
+    <None Include="Assets\MeshMaker\Frameworks\Shapes\Trapezoid.xml" />
+    <None Include="Assets\MeshMaker\Meshes\Meshes.txt" />
+    <None Include="Assets\MeshMaker\Parts\Hallway.xml" />
+    <None Include="Assets\MeshMaker\Parts\Parts.txt" />
+    <None Include="Assets\MeshMaker\Parts\Turret.xml" />
+    <None Include="Assets\MeshMaker\Parts\autosave.xml" />
+    <None Include="Assets\MeshMaker\Prefabs\Prefabs.txt" />
+    <None Include="Assets\MeshMaker\SVGFiles\arc1.txt" />
+    <None Include="Assets\MeshMaker\SVGFiles\arc2.txt" />
+    <None Include="Assets\MeshMaker\SVGFiles\arc3.txt" />
+    <None Include="Assets\MeshMaker\SVGFiles\butterfly.txt" />
+    <None Include="Assets\MeshMaker\SVGFiles\circle1.txt" />
+    <None Include="Assets\MeshMaker\SVGFiles\lineargradient1.txt" />
+    <None Include="Assets\MeshMaker\SVGFiles\lines1.txt" />
+    <None Include="Assets\MeshMaker\SVGFiles\lion.txt" />
+    <None Include="Assets\MeshMaker\SVGFiles\none.txt" />
+    <None Include="Assets\MeshMaker\SVGFiles\path1.txt" />
+    <None Include="Assets\MeshMaker\SVGFiles\path2.txt" />
+    <None Include="Assets\MeshMaker\SVGFiles\path3.txt" />
+    <None Include="Assets\MeshMaker\SVGFiles\polyline1.txt" />
+    <None Include="Assets\MeshMaker\SVGFiles\polyline2.txt" />
+    <None Include="Assets\MeshMaker\SVGFiles\radgrad1.txt" />
+    <None Include="Assets\MeshMaker\SVGFiles\rect1.txt" />
+    <None Include="Assets\MeshMaker\SVGFiles\rect2.txt" />
+    <None Include="Assets\MeshMaker\SVGFiles\test1.txt" />
+    <None Include="Assets\MeshMaker\SVGFiles\test2.txt" />
+    <None Include="Assets\MeshMaker\SVGFiles\tiger.txt" />
+    <None Include="Assets\MeshMaker\Settings\3dbrush_default.xml" />
+    <None Include="Assets\MeshMaker\Settings\3dbrush_last.xml" />
+    <None Include="Assets\MeshMaker\Settings\LOD_default.xml" />
+    <None Include="Assets\MeshMaker\Settings\LOD_last.xml" />
+    <None Include="Assets\MeshMaker\Settings\construction_default.xml" />
+    <None Include="Assets\MeshMaker\Settings\construction_last.xml" />
+    <None Include="Assets\MeshMaker\Settings\construction_parameters_default.xml" />
+    <None Include="Assets\MeshMaker\Settings\construction_parameters_last.xml" />
+    <None Include="Assets\MeshMaker\Settings\geom_default.xml" />
+    <None Include="Assets\MeshMaker\Settings\geom_last.xml" />
+    <None Include="Assets\MeshMaker\Settings\level_editor_default.xml" />
+    <None Include="Assets\MeshMaker\Settings\level_editor_hotkeys.xml" />
+    <None Include="Assets\MeshMaker\Settings\level_editor_last.xml" />
+    <None Include="Assets\MeshMaker\Settings\mesh_cutter_default.xml" />
+    <None Include="Assets\MeshMaker\Settings\mesh_cutter_last.xml" />
+    <None Include="Assets\MeshMaker\Settings\mesh_editor_default.xml" />
+    <None Include="Assets\MeshMaker\Settings\mesh_editor_hotkeys.xml" />
+    <None Include="Assets\MeshMaker\Settings\mesh_editor_last.xml" />
+    <None Include="Assets\MeshMaker\Settings\mesh_maker_default.xml" />
+    <None Include="Assets\MeshMaker\Settings\mesh_maker_last.xml" />
+    <None Include="Assets\MeshMaker\Settings\prefab_maker_default.xml" />
+    <None Include="Assets\MeshMaker\Settings\prefab_maker_last.xml" />
+    <None Include="Assets\MeshMaker\Settings\snap_to_grid_default.xml" />
+    <None Include="Assets\MeshMaker\Settings\snap_to_grid_last.xml" />
+    <None Include="Assets\MeshMaker\Shapes\Primitives\Circle.xml" />
+    <None Include="Assets\MeshMaker\Shapes\Primitives\Decagon.xml" />
+    <None Include="Assets\MeshMaker\Shapes\Primitives\Ellipse.xml" />
+    <None Include="Assets\MeshMaker\Shapes\Primitives\Equilateral Triangle.xml" />
+    <None Include="Assets\MeshMaker\Shapes\Primitives\Heptagon.xml" />
+    <None Include="Assets\MeshMaker\Shapes\Primitives\Hexagon.xml" />
+    <None Include="Assets\MeshMaker\Shapes\Primitives\Isosceles Triangle.xml" />
+    <None Include="Assets\MeshMaker\Shapes\Primitives\Kite.xml" />
+    <None Include="Assets\MeshMaker\Shapes\Primitives\Nonagon.xml" />
+    <None Include="Assets\MeshMaker\Shapes\Primitives\Octagon.xml" />
+    <None Include="Assets\MeshMaker\Shapes\Primitives\Parallelogram.xml" />
+    <None Include="Assets\MeshMaker\Shapes\Primitives\Pentagon.xml" />
+    <None Include="Assets\MeshMaker\Shapes\Primitives\Rectangle.xml" />
+    <None Include="Assets\MeshMaker\Shapes\Primitives\Rhombus.xml" />
+    <None Include="Assets\MeshMaker\Shapes\Primitives\Right Angle Triangle.xml" />
+    <None Include="Assets\MeshMaker\Shapes\Primitives\Scalene Triangle.xml" />
+    <None Include="Assets\MeshMaker\Shapes\Primitives\Square.xml" />
+    <None Include="Assets\MeshMaker\Shapes\Primitives\Start Shape.xml" />
+    <None Include="Assets\MeshMaker\Shapes\Primitives\Trapezoid.xml" />
+    <None Include="Assets\MeshMaker\UndoRedo\UndoRedo.txt" />
+    <None Include="Assets\MeshMaker\UndoRedo\geom_redo1.xml" />
+    <None Include="Assets\MeshMaker\UndoRedo\geom_redo2.xml" />
+    <None Include="Assets\MeshMaker\UndoRedo\geom_undo1.xml" />
+    <None Include="Assets\MeshMaker\UndoRedo\geom_undo2.xml" />
+    <None Include="Assets\Modern Doors Pack\!ReadMe!.txt" />
+    <None Include="Assets\Modern Doors Pack\Scripts\!Setup Video Link!.txt" />
+    <None Include="Assets\Motel\Readme.txt" />
+    <None Include="Assets\OldRadio\Okean\ReadMe.txt" />
+    <None Include="Assets\PBS Materials Variety Pack\readme.txt" />
+    <None Include="Assets\Plugins\THOR_Thunderstorm\Sources\Materials\Shaders\THOR_LightningBolt.shader" />
+    <None Include="Assets\Plugins\THOR_Thunderstorm\Sources\Materials\Shaders\THOR_LightningCloud.shader" />
+    <None Include="Assets\Plugins\VolumetricLightBeam\Readme.txt" />
+    <None Include="Assets\Plugins\VolumetricLightBeam\Resources\Shaders\ShaderIncludes.cginc" />
+    <None Include="Assets\Plugins\VolumetricLightBeam\Resources\Shaders\ShaderMaths.cginc" />
+    <None Include="Assets\Plugins\VolumetricLightBeam\Resources\Shaders\ShaderSRP.cginc" />
+    <None Include="Assets\Plugins\VolumetricLightBeam\Resources\Shaders\ShaderUtils.cginc" />
+    <None Include="Assets\Plugins\VolumetricLightBeam\Resources\Shaders\VolumetricLightBeam1Pass.shader" />
+    <None Include="Assets\Plugins\VolumetricLightBeam\Resources\Shaders\VolumetricLightBeam2Pass.shader" />
+    <None Include="Assets\Plugins\VolumetricLightBeam\Resources\Shaders\VolumetricLightBeamShared.cginc" />
+    <None Include="Assets\RFPSP\Demo\Other\Terrain Assets\Trees Ambient-Occlusion\Billboard.shader" />
+    <None Include="Assets\RFPSP\Demo\Other\Terrain Assets\Trees Ambient-Occlusion\NewShader.shader" />
+    <None Include="Assets\RFPSP\Demo\Other\Terrain Assets\Trees Ambient-Occlusion\aaa.compute" />
+    <None Include="Assets\RFPSP\Demo\Other\Water\Shaders\FX-Water Simple With Alpha.shader" />
+    <None Include="Assets\RFPSP\Image Effects\Shaders\BlendModesOverlay.shader" />
+    <None Include="Assets\RFPSP\Image Effects\Shaders\BlurEffectConeTaps.shader" />
+    <None Include="Assets\RFPSP\Image Effects\Shaders\CameraMotionBlur.shader" />
+    <None Include="Assets\RFPSP\Image Effects\Shaders\CameraMotionBlurDX11.shader" />
+    <None Include="Assets\RFPSP\Image Effects\Shaders\ChromaticAberrationShader.shader" />
+    <None Include="Assets\RFPSP\Image Effects\Shaders\ColorCorrection3DLut.shader" />
+    <None Include="Assets\RFPSP\Image Effects\Shaders\ColorCorrectionCurves.shader" />
+    <None Include="Assets\RFPSP\Image Effects\Shaders\ColorCorrectionCurvesSimple.shader" />
+    <None Include="Assets\RFPSP\Image Effects\Shaders\ColorCorrectionEffect.shader" />
+    <None Include="Assets\RFPSP\Image Effects\Shaders\ColorCorrectionSelective.shader" />
+    <None Include="Assets\RFPSP\Image Effects\Shaders\Contrast Stretch\Adaptation.shader" />
+    <None Include="Assets\RFPSP\Image Effects\Shaders\Contrast Stretch\Apply.shader" />
+    <None Include="Assets\RFPSP\Image Effects\Shaders\Contrast Stretch\Luminance.shader" />
+    <None Include="Assets\RFPSP\Image Effects\Shaders\Contrast Stretch\MinMaxReduction.shader" />
+    <None Include="Assets\RFPSP\Image Effects\Shaders\ContrastComposite.shader" />
+    <None Include="Assets\RFPSP\Image Effects\Shaders\ConvertDepth.shader" />
+    <None Include="Assets\RFPSP\Image Effects\Shaders\CreaseApply.shader" />
+    <None Include="Assets\RFPSP\Image Effects\Shaders\EdgeDetectNormals.shader" />
+    <None Include="Assets\RFPSP\Image Effects\Shaders\FisheyeShader.shader" />
+    <None Include="Assets\RFPSP\Image Effects\Shaders\GlobalFog.shader" />
+    <None Include="Assets\RFPSP\Image Effects\Shaders\GrayscaleEffect.shader" />
+    <None Include="Assets\RFPSP\Image Effects\Shaders\MotionBlur.shader" />
+    <None Include="Assets\RFPSP\Image Effects\Shaders\MotionBlurClear.shader" />
+    <None Include="Assets\RFPSP\Image Effects\Shaders\NoiseAndGrain.shader" />
+    <None Include="Assets\RFPSP\Image Effects\Shaders\NoiseAndGrainDX11.shader" />
+    <None Include="Assets\RFPSP\Image Effects\Shaders\NoiseEffectShaderRGB.shader" />
+    <None Include="Assets\RFPSP\Image Effects\Shaders\NoiseEffectShaderYUV.shader" />
+    <None Include="Assets\RFPSP\Image Effects\Shaders\PrepareSunShaftsBlur.shader" />
+    <None Include="Assets\RFPSP\Image Effects\Shaders\RadialBlur.shader" />
+    <None Include="Assets\RFPSP\Image Effects\Shaders\SSAOShader.shader" />
+    <None Include="Assets\RFPSP\Image Effects\Shaders\ScreenSpaceAmbientObscurance.shader" />
+    <None Include="Assets\RFPSP\Image Effects\Shaders\ScreenSpaceRaytrace.cginc" />
+    <None Include="Assets\RFPSP\Image Effects\Shaders\SepiaToneEffect.shader" />
+    <None Include="Assets\RFPSP\Image Effects\Shaders\ShowAlphaChannel.shader" />
+    <None Include="Assets\RFPSP\Image Effects\Shaders\SimpleClear.shader" />
+    <None Include="Assets\RFPSP\Image Effects\Shaders\SunShaftsComposite.shader" />
+    <None Include="Assets\RFPSP\Image Effects\Shaders\Tonemapper.shader" />
+    <None Include="Assets\RFPSP\Image Effects\Shaders\TwirlEffect.shader" />
+    <None Include="Assets\RFPSP\Image Effects\Shaders\VignettingShader.shader" />
+    <None Include="Assets\RFPSP\Image Effects\Shaders\VortexEffect.shader" />
+    <None Include="Assets\RFPSP\Image Effects\Shaders\_Antialiasing\DLAA.shader" />
+    <None Include="Assets\RFPSP\Image Effects\Shaders\_Antialiasing\FXAA2.shader" />
+    <None Include="Assets\RFPSP\Image Effects\Shaders\_Antialiasing\FXAA3Console.shader" />
+    <None Include="Assets\RFPSP\Image Effects\Shaders\_Antialiasing\FXAAPreset2.shader" />
+    <None Include="Assets\RFPSP\Image Effects\Shaders\_Antialiasing\FXAAPreset3.shader" />
+    <None Include="Assets\RFPSP\Image Effects\Shaders\_Antialiasing\NFAA.shader" />
+    <None Include="Assets\RFPSP\Image Effects\Shaders\_Antialiasing\SSAA.shader" />
+    <None Include="Assets\RFPSP\Image Effects\Shaders\_BloomAndFlares\Blend.shader" />
+    <None Include="Assets\RFPSP\Image Effects\Shaders\_BloomAndFlares\BlendForBloom.shader" />
+    <None Include="Assets\RFPSP\Image Effects\Shaders\_BloomAndFlares\BlendOneOne.shader" />
+    <None Include="Assets\RFPSP\Image Effects\Shaders\_BloomAndFlares\BlurAndFlares.shader" />
+    <None Include="Assets\RFPSP\Image Effects\Shaders\_BloomAndFlares\BrightPassFilter.shader" />
+    <None Include="Assets\RFPSP\Image Effects\Shaders\_BloomAndFlares\BrightPassFilter2.shader" />
+    <None Include="Assets\RFPSP\Image Effects\Shaders\_BloomAndFlares\LensFlareCreate.shader" />
+    <None Include="Assets\RFPSP\Image Effects\Shaders\_BloomAndFlares\MobileBloom.shader" />
+    <None Include="Assets\RFPSP\Image Effects\Shaders\_BloomAndFlares\MobileBlur.shader" />
+    <None Include="Assets\RFPSP\Image Effects\Shaders\_BloomAndFlares\MultiPassHollywoodFlares.shader" />
+    <None Include="Assets\RFPSP\Image Effects\Shaders\_BloomAndFlares\SeparableBlurPlus.shader" />
+    <None Include="Assets\RFPSP\Image Effects\Shaders\_BloomAndFlares\VignetteShader.shader" />
+    <None Include="Assets\RFPSP\Image Effects\Shaders\_DepthOfField\Bokeh34.shader" />
+    <None Include="Assets\RFPSP\Image Effects\Shaders\_DepthOfField\DepthOfField34.shader" />
+    <None Include="Assets\RFPSP\Image Effects\Shaders\_DepthOfField\DepthOfFieldDX11.shader" />
+    <None Include="Assets\RFPSP\Image Effects\Shaders\_DepthOfField\DepthOfFieldScatter.shader" />
+    <None Include="Assets\RFPSP\Image Effects\Shaders\_DepthOfField\SeparableBlur.shader" />
+    <None Include="Assets\RFPSP\Image Effects\Shaders\_DepthOfField\SeparableWeightedBlurDof34.shader" />
+    <None Include="Assets\RFPSP\Image Effects\Shaders\_DepthOfField\TiltShiftHdrLensBlur.shader" />
+    <None Include="Assets\RFPSP\Image Effects\Shaders\frag_ao.cginc" />
+    <None Include="Assets\RFPSP\Shaders\DecalShader.shader" />
+    <None Include="Assets\RFPSP\Shaders\Projector Multiply.shader" />
+    <None Include="Assets\RFPSP\Shaders\WaterShader.shader" />
+    <None Include="Assets\Ronie Export I\20_Extinguisher_SM\3DsMax_Corona.txt" />
+    <None Include="Assets\Ronie Export I\20_Extinguisher_SM\3DsMax_MentalRay.txt" />
+    <None Include="Assets\Ronie Export I\20_Extinguisher_SM\3DsMax_VRay.txt" />
+    <None Include="Assets\Ronie Export I\20_Extinguisher_SM\3DsMax_iRay.txt" />
+    <None Include="Assets\Ronie Export I\20_Extinguisher_SM\Maya_Arnold.txt" />
+    <None Include="Assets\Ronie Export I\20_Extinguisher_SM\Maya_Octane.txt" />
+    <None Include="Assets\Ronie Export I\20_Extinguisher_SM\Maya_RedShift.txt" />
+    <None Include="Assets\Ronie Export I\20_Extinguisher_SM\Maya_RenderMan.txt" />
+    <None Include="Assets\Ronie Export I\20_Extinguisher_SM\Maya_VRay.txt" />
+    <None Include="Assets\SampleScenes\Shaders\Skybox-Procedural.shader" />
+    <None Include="Assets\Shipping Container Environment\Readme.txt" />
+    <None Include="Assets\Single_detailed_truck\readme.txt" />
+    <None Include="Assets\Smartphone\StandardColorMask.shader" />
+    <None Include="Assets\Standard Assets\Cameras\CameraGuidelines.txt" />
+    <None Include="Assets\Standard Assets\Characters\FirstPersonCharacter\FirstPersonCharacterGuidelines.txt" />
+    <None Include="Assets\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />
+    <None Include="Assets\Standard Assets\Characters\ThirdPersonCharacter\ThirdPersonCharacterGuidelines.txt" />
+    <None Include="Assets\Standard Assets\CrossPlatformInput\CrossPlatformInputGuidelines.txt" />
+    <None Include="Assets\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
+    <None Include="Assets\Standard Assets\Effects\ImageEffects\Readme.txt" />
+    <None Include="Assets\Standard Assets\Effects\Projectors\Guidelines.txt" />
+    <None Include="Assets\Standard Assets\Effects\Projectors\Shaders\ProjectorLight.shader" />
+    <None Include="Assets\Standard Assets\Effects\Projectors\Shaders\ProjectorMultiply.shader" />
+    <None Include="Assets\Standard Assets\Effects\TessellationShaders\Shaders\BumpedSpecularDisplacement.shader" />
+    <None Include="Assets\Standard Assets\Effects\TessellationShaders\Shaders\BumpedSpecularSmooth.shader" />
+    <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonBasic.shader" />
+    <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonBasicOutline.shader" />
+    <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonLit.shader" />
+    <None Include="Assets\Standard Assets\Effects\ToonShading\Shaders\ToonLitOutline.shader" />
+    <None Include="Assets\Standard Assets\Environment\Water (Basic)\Shaders\FXWaterBasic.shader" />
+    <None Include="Assets\Standard Assets\Environment\Water\Water\Shaders\FXWaterPro.shader" />
+    <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Advanced.shader" />
+    <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Simple.shader" />
+    <None Include="Assets\Standard Assets\Environment\Water\Water4\Shaders\WaterInclude.cginc" />
+    <None Include="Assets\Standard Assets\Fonts\OpenSans\License!.txt" />
+    <None Include="Assets\Standard Assets\ParticleSystems\ParticleSystemsGuidelines.txt" />
+    <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAdd.shader" />
+    <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAddSoft.shader" />
+    <None Include="Assets\Standard Assets\ParticleSystems\Shaders\PriorityParticleAlpha.shader" />
+    <None Include="Assets\Standard Assets\Prototyping\Shaders\WorldCoordDiffuse.shader" />
+    <None Include="Assets\Standard Assets\Vehicles\Aircraft\AircraftGuidelines.txt" />
+    <None Include="Assets\Standard Assets\Vehicles\Car\CarGuidelines.txt" />
+    <None Include="Assets\Standard Assets\Vehicles\Car\Shaders\DiffuseReflectiveShader.shader" />
+    <None Include="Assets\Standard Assets\Vehicles\Car\Shaders\ReflectiveDiffuseSpec.shader" />
+    <None Include="Assets\Standard Assets\Vehicles\Car\Shaders\ReflectiveDiffuseSpecTransp.shader" />
+    <None Include="Assets\Tim&apos;s Assets\Doors\Shader\BloodyDoor.shader" />
+    <None Include="Assets\Universal Sound FX\#Game Genre References\8bit and Retro.txt" />
+    <None Include="Assets\Universal Sound FX\#Game Genre References\Fighting.txt" />
+    <None Include="Assets\Universal Sound FX\#Game Genre References\First Person Shooter (FPS).txt" />
+    <None Include="Assets\Universal Sound FX\#Game Genre References\Physics.txt" />
+    <None Include="Assets\Universal Sound FX\#Game Genre References\Platform.txt" />
+    <None Include="Assets\Universal Sound FX\#Game Genre References\Puzzle.txt" />
+    <None Include="Assets\Universal Sound FX\#Game Genre References\Real Time Stategy (RTS) Medieval.txt" />
+    <None Include="Assets\Universal Sound FX\#Game Genre References\Real Time Stategy (RTS) Sci-Fi.txt" />
+    <None Include="Assets\Universal Sound FX\#Game Genre References\Shoot em Up.txt" />
+    <None Include="Assets\Universal Sound FX\version_history.txt" />
+    <None Include="Assets\Vintage House\Assets\Shaders\PBR_2_AO.shader" />
+    <None Include="Assets\Vintage House\Assets\Shaders\Rocks.shader" />
+    <None Include="Assets\Vintage House\Assets\Shaders\Rocks_top_cover.shader" />
+    <None Include="Assets\Vintage House\Assets\Shaders\Rocks_top_light.shader" />
+    <None Include="Assets\Vintage House\Assets\Shaders\TV_noise_pbr.shader" />
+    <None Include="Assets\Vintage House\Assets\Shaders\Translucency 1.shader" />
+    <None Include="Assets\Vintage House\Assets\Shaders\Translucency 2.shader" />
+    <None Include="Assets\Vintage House\Demo\Post-Pro_Info_demo.txt" />
+    <None Include="Assets\Wasteland Cabin\Read me.txt" />
+    <None Include="Assets\WaterTank\Shaders\NormalSpecGloss.shader" />
+    <None Include="Assets\WeatherMaker\ChangeLog.txt" />
+    <None Include="Assets\WeatherMaker\Demo\DemoResources\Material\WeatherMakerDemoBackgroundShader.shader" />
+    <None Include="Assets\WeatherMaker\Prefab\Shaders\Resources\WeatherMakerCloudProbeShader.compute" />
+    <None Include="Assets\WeatherMaker\Prefab\Shaders\WeatherMakerAdditiveShader.shader" />
+    <None Include="Assets\WeatherMaker\Prefab\Shaders\WeatherMakerAdvancedNoiseShaderInclude.cginc" />
+    <None Include="Assets\WeatherMaker\Prefab\Shaders\WeatherMakerAnimated3DTextureShader.shader" />
+    <None Include="Assets\WeatherMaker\Prefab\Shaders\WeatherMakerAtmosphereComputeShader.compute" />
+    <None Include="Assets\WeatherMaker\Prefab\Shaders\WeatherMakerAtmosphereLookupShader.shader" />
+    <None Include="Assets\WeatherMaker\Prefab\Shaders\WeatherMakerAtmosphereShaderInclude.cginc" />
+    <None Include="Assets\WeatherMaker\Prefab\Shaders\WeatherMakerAuroraShaderInclude.cginc" />
+    <None Include="Assets\WeatherMaker\Prefab\Shaders\WeatherMakerBoxFogShader.shader" />
+    <None Include="Assets\WeatherMaker\Prefab\Shaders\WeatherMakerCloudNoiseShader.shader" />
+    <None Include="Assets\WeatherMaker\Prefab\Shaders\WeatherMakerCloudNoiseShaderInclude.cginc" />
+    <None Include="Assets\WeatherMaker\Prefab\Shaders\WeatherMakerCloudParticleShader.shader" />
+    <None Include="Assets\WeatherMaker\Prefab\Shaders\WeatherMakerCloudShaderInclude.cginc" />
+    <None Include="Assets\WeatherMaker\Prefab\Shaders\WeatherMakerCloudShadowShader.shader" />
+    <None Include="Assets\WeatherMaker\Prefab\Shaders\WeatherMakerCloudVolumetricShaderInclude.cginc" />
+    <None Include="Assets\WeatherMaker\Prefab\Shaders\WeatherMakerCoreShaderInclude.cginc" />
+    <None Include="Assets\WeatherMaker\Prefab\Shaders\WeatherMakerDebugShader.shader" />
+    <None Include="Assets\WeatherMaker\Prefab\Shaders\WeatherMakerDownsampleDepthBufferShader.shader" />
+    <None Include="Assets\WeatherMaker\Prefab\Shaders\WeatherMakerFogExternalShaderInclude.cginc" />
+    <None Include="Assets\WeatherMaker\Prefab\Shaders\WeatherMakerFogShaderInclude.cginc" />
+    <None Include="Assets\WeatherMaker\Prefab\Shaders\WeatherMakerFogVertFragShaderInclude.cginc" />
+    <None Include="Assets\WeatherMaker\Prefab\Shaders\WeatherMakerFullScreenAlphaShader.shader" />
+    <None Include="Assets\WeatherMaker\Prefab\Shaders\WeatherMakerFullScreenBilateralBlurShader.shader" />
+    <None Include="Assets\WeatherMaker\Prefab\Shaders\WeatherMakerFullScreenBlurShader.shader" />
+    <None Include="Assets\WeatherMaker\Prefab\Shaders\WeatherMakerFullScreenBlurShadowShader.shader" />
+    <None Include="Assets\WeatherMaker\Prefab\Shaders\WeatherMakerFullScreenCloudsShader.shader" />
+    <None Include="Assets\WeatherMaker\Prefab\Shaders\WeatherMakerFullScreenFogShader.shader" />
+    <None Include="Assets\WeatherMaker\Prefab\Shaders\WeatherMakerFullScreenOverlayShader.shader" />
+    <None Include="Assets\WeatherMaker\Prefab\Shaders\WeatherMakerFullScreenWetnessOverlayShader.shader" />
+    <None Include="Assets\WeatherMaker\Prefab\Shaders\WeatherMakerLightShaderInclude.cginc" />
+    <None Include="Assets\WeatherMaker\Prefab\Shaders\WeatherMakerLightningBoltShader.shader" />
+    <None Include="Assets\WeatherMaker\Prefab\Shaders\WeatherMakerLightningBoltShaderNoGlow.shader" />
+    <None Include="Assets\WeatherMaker\Prefab\Shaders\WeatherMakerMathShaderInclude.cginc" />
+    <None Include="Assets\WeatherMaker\Prefab\Shaders\WeatherMakerMoonShader.shader" />
+    <None Include="Assets\WeatherMaker\Prefab\Shaders\WeatherMakerNoiseShaderInclude.cginc" />
+    <None Include="Assets\WeatherMaker\Prefab\Shaders\WeatherMakerNormalGenerator2DShader.shader" />
+    <None Include="Assets\WeatherMaker\Prefab\Shaders\WeatherMakerNullZoneShaderInclude.cginc" />
+    <None Include="Assets\WeatherMaker\Prefab\Shaders\WeatherMakerOverlayShaderInclude.cginc" />
+    <None Include="Assets\WeatherMaker\Prefab\Shaders\WeatherMakerPrecipitationShader.shader" />
+    <None Include="Assets\WeatherMaker\Prefab\Shaders\WeatherMakerScreenSpaceShadowsShader.shader" />
+    <None Include="Assets\WeatherMaker\Prefab\Shaders\WeatherMakerShadowsShaderInclude.cginc" />
+    <None Include="Assets\WeatherMaker\Prefab\Shaders\WeatherMakerSkyBoxScatteringShader.shader" />
+    <None Include="Assets\WeatherMaker\Prefab\Shaders\WeatherMakerSkyBoxShaderInclude.cginc" />
+    <None Include="Assets\WeatherMaker\Prefab\Shaders\WeatherMakerSkyPlaneShader.shader" />
+    <None Include="Assets\WeatherMaker\Prefab\Shaders\WeatherMakerSkyShaderInclude.cginc" />
+    <None Include="Assets\WeatherMaker\Prefab\Shaders\WeatherMakerSkySphereShader.shader" />
+    <None Include="Assets\WeatherMaker\Prefab\Shaders\WeatherMakerSphereFogShader.shader" />
+    <None Include="Assets\WeatherMaker\Prefab\Shaders\WeatherMakerSunShader.shader" />
+    <None Include="Assets\WeatherMaker\Prefab\Shaders\WeatherMakerTemporalReprojectionShader.shader" />
+    <None Include="Assets\WeatherMaker\Prefab\Shaders\WeatherMakerTemporalReprojectionShaderInclude.cginc" />
+    <None Include="Assets\WeatherMaker\Prefab\Shaders\WeatherMakerTesselationShaderInclude.cginc" />
+    <None Include="Assets\WeatherMaker\Prefab\Shaders\WeatherMakerTreeBillboardShader.shader" />
+    <None Include="Assets\WeatherMaker\Prefab\Shaders\WeatherMakerWaterShader.shader" />
+    <None Include="Assets\WeatherMaker\Prefab\Shaders\WeatherMakerWaterShaderInclude.cginc" />
+    <None Include="Assets\WeatherMaker\Prefab\Shaders\WeatherMakerWaterTesselationShader.shader" />
+    <None Include="Assets\WeatherMaker\Prefab\Shaders\WeatherMakerWavingGrassBillboardShader.shader" />
+    <None Include="Assets\WeatherMaker\Prefab\Shaders\WeatherMakerWavingGrassShader.shader" />
+    <None Include="Assets\WeatherMaker\Prefab\Shaders\WeatherMakerWeatherMapSdfShader.shader" />
+    <None Include="Assets\WeatherMaker\Prefab\Shaders\WeatherMakerWeatherMapShader.shader" />
+    <None Include="Assets\WeatherMaker\Prefab\WeatherMakerNetworkPlayer.zip.txt" />
+    <None Include="Assets\WeatherMaker\Readme.txt" />
+    <None Include="Assets\WeatherMaker\ThirdParty\HydraulicErosion\License.txt" />
+    <None Include="Assets\WeatherMaker\ThirdParty\HydraulicErosion\Scripts\ComputeShaders\Erosion.compute" />
+    <None Include="Assets\WeatherMaker\ThirdParty\HydraulicErosion\Scripts\ComputeShaders\HeightMap.compute" />
+    <None Include="Assets\WeatherMaker\ThirdParty\HydraulicErosion\Shaders\Terrain.shader" />
+    <None Include="Assets\WeatherMaker\ThirdParty\HydraulicErosion\Shaders\Terrain2.shader" />
+    <None Include="Assets\info_morgueroom.txt" />
+    <None Include="Assets\pickup 1980\effects\FXAA\Shaders\Fxaa3.shader" />
+    <None Include="Assets\pickup 1980\effects\FXAA\Shaders\Fxaa3_9.cginc" />
+    <None Include="Assets\texturepackA\shaders\bumpedspecmap.shader" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="GenerateTargetFrameworkMonikerAttribute" />
+</Project>
