@@ -13,10 +13,11 @@ public class RaycastSend : MonoBehaviour {
     RaycastHit hit;
 
     void Update() 
-	{        
-        Vector3 fwd = transform.TransformDirection(Vector3.forward);
+	{                
+        var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-        if (Physics.Raycast(transform.position, fwd, out hit, rayLength))
+        if (Physics.Raycast(ray, out hit, rayLength))
+       
         { 
             if (hit.collider.tag =="door")
             {
