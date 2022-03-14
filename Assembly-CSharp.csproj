@@ -68,6 +68,7 @@
      <Compile Include="Assets\_Scripts\Patrol.cs" />
      <Compile Include="Assets\_Scripts\RayCastDoor.cs" />
      <Compile Include="Assets\_Scripts\RayCastDoorRemote.cs" />
+     <Compile Include="Assets\_Scripts\RayCastInteract.cs" />
      <Compile Include="Assets\_Scripts\RayCastLift.cs" />
      <Compile Include="Assets\_Scripts\RaycastSend.cs" />
      <Compile Include="Assets\_Scripts\vanhat &amp; ei käytössä\DoorHandler.cs" />
@@ -296,6 +297,10 @@
      <Compile Include="Assets\SampleScenes\Scripts\ParticleSceneControls.cs" />
      <Compile Include="Assets\SampleScenes\Scripts\PlaceTargetWithMouse.cs" />
      <Compile Include="Assets\SampleScenes\Scripts\SlowMoButton.cs" />
+     <Compile Include="Assets\Sketchfab For Unity\Scripts\SketchfabApi.cs" />
+     <Compile Include="Assets\Sketchfab For Unity\Scripts\SketchfabExporter.cs" />
+     <Compile Include="Assets\Sketchfab For Unity\Scripts\SketchfabImporter.cs" />
+     <Compile Include="Assets\Sketchfab For Unity\Scripts\SketchfabPlugin.cs" />
      <Compile Include="Assets\Station v1\Script\Stan_M1_Anim.cs" />
      <Compile Include="Assets\TheGamingPeople\Scripts\CameraController.cs" />
      <Compile Include="Assets\WeatherMaker\Demo\DemoResources\Scripts\WeatherMakerDemoAnimateMoveScript.cs" />
@@ -480,6 +485,7 @@
      <None Include="Assets\MeshMaker\Exported Objects\Exported Objects.txt" />
      <None Include="Assets\RFPSP\Image Effects\Shaders\ColorCorrectionCurves.shader" />
      <None Include="Assets\MeshMaker\SVGFiles\path2.txt" />
+     <None Include="Assets\Sketchfab For Unity\Dependencies\Shaders\GLTFColorSpace.cginc" />
      <None Include="Assets\MeshMaker\Settings\mesh_cutter_default.xml" />
      <None Include="Assets\RFPSP\Image Effects\Shaders\ScreenSpaceAmbientObscurance.shader" />
      <None Include="Assets\MeshMaker\SVGFiles\test1.txt" />
@@ -578,6 +584,7 @@
      <None Include="Assets\Ronie Export I\20_Extinguisher_SM\Maya_RenderMan.txt" />
      <None Include="Assets\WeatherMaker\ChangeLog.txt" />
      <None Include="Assets\WeatherMaker\Prefab\Shaders\WeatherMakerTemporalReprojectionShader.shader" />
+     <None Include="Assets\_Sketchfab\generator pe-77\license.txt" />
      <None Include="Assets\MeshMaker\Settings\level_editor_default.xml" />
      <None Include="Assets\WeatherMaker\ThirdParty\HydraulicErosion\Scripts\ComputeShaders\Erosion.compute" />
      <None Include="Assets\WeatherMaker\Prefab\Shaders\WeatherMakerTemporalReprojectionShaderInclude.cginc" />
@@ -646,6 +653,7 @@
      <None Include="Assets\MeshMaker\SVGFiles\arc1.txt" />
      <None Include="Assets\Ronie Export I\20_Extinguisher_SM\Maya_Octane.txt" />
      <None Include="Assets\Flooded_Grounds\PostProcessing\Resources\Shaders\TAA.cginc" />
+     <None Include="Assets\Sketchfab For Unity\Dependencies\Shaders\GLTFFlipTexture.shader" />
      <None Include="Assets\MeshMaker\Settings\geom_default.xml" />
      <None Include="Assets\RFPSP\Image Effects\Shaders\CameraMotionBlurDX11.shader" />
      <None Include="Assets\Hydropower_station\readme.txt" />
@@ -706,6 +714,7 @@
      <None Include="Assets\Universal Sound FX\#Game Genre References\First Person Shooter (FPS).txt" />
      <None Include="Assets\WeatherMaker\Prefab\WeatherMakerNetworkPlayer.zip.txt" />
      <None Include="Assets\Flooded_Grounds\PostProcessing\Resources\Shaders\Bloom.shader" />
+     <None Include="Assets\Sketchfab For Unity\Dependencies\Shaders\GLTFBumpToNormal.shader" />
      <None Include="Assets\RFPSP\Image Effects\Shaders\VignettingShader.shader" />
      <None Include="Assets\WeatherMaker\Prefab\Shaders\Resources\WeatherMakerCloudProbeShader.compute" />
      <None Include="Assets\Ronie Export I\20_Extinguisher_SM\3DsMax_Corona.txt" />
@@ -733,6 +742,7 @@
      <None Include="Assets\RFPSP\Image Effects\Shaders\_BloomAndFlares\LensFlareCreate.shader" />
      <None Include="Assets\FPSHangar\_Source\VolumetricLight\VolumetricLight.shader" />
      <None Include="Assets\Flooded_Grounds\Content\Shaders\FG_Triplanar_BumpSpec.shader" />
+     <None Include="Assets\_Sketchfab\combination padlock\license.txt" />
      <None Include="Assets\Ronie Export I\20_Extinguisher_SM\Maya_RedShift.txt" />
      <None Include="Assets\MeshMaker\SVGFiles\arc2.txt" />
      <None Include="Assets\MeshMaker\Files\LevelEditor\Shaders\customWire5_5.shader" />
@@ -763,6 +773,7 @@
      <None Include="Assets\RFPSP\Demo\Other\Terrain Assets\Trees Ambient-Occlusion\aaa.compute" />
      <None Include="Assets\Industrial Tanks\Info.txt" />
      <None Include="Assets\MeshMaker\Settings\construction_parameters_last.xml" />
+     <None Include="Assets\Sketchfab For Unity\Dependencies\Shaders\GLTFPackOccMetalRough.shader" />
      <None Include="Assets\WeatherMaker\Prefab\Shaders\WeatherMakerAtmosphereComputeShader.compute" />
      <None Include="Assets\Flooded_Grounds\PostProcessing\Resources\Shaders\AmbientOcclusion.cginc" />
      <None Include="Assets\MeshMaker\Settings\construction_parameters_default.xml" />
@@ -822,6 +833,18 @@
  </Reference>
  <Reference Include="Scripts">
  <HintPath>U:/Hospital/Assets/MeshMaker/Scripts/Scripts.dll</HintPath>
+ </Reference>
+ <Reference Include="GLTFSerialization">
+ <HintPath>U:/Hospital/Assets/Sketchfab For Unity/Dependencies/Libraries/GLTFSerialization.dll</HintPath>
+ </Reference>
+ <Reference Include="Ionic.Zip.Unity">
+ <HintPath>U:/Hospital/Assets/Sketchfab For Unity/Dependencies/Libraries/Ionic.Zip.Unity.dll</HintPath>
+ </Reference>
+ <Reference Include="Newtonsoft.Json">
+ <HintPath>U:/Hospital/Assets/Sketchfab For Unity/Dependencies/Libraries/Newtonsoft.Json.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityGLTF">
+ <HintPath>U:/Hospital/Assets/Sketchfab For Unity/Dependencies/Libraries/UnityGLTF.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Advertisements">
  <HintPath>C:/ProgramData/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.4/UnityEngine.Advertisements.dll</HintPath>

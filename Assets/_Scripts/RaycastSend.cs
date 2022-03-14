@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class RaycastSend : MonoBehaviour {
 
-    //Tää liitetään FPS controllerin Main cameraan
-    //ampuu säteen, joka triggerin perusteella suorittaa toiminnon
+    //Tämä liitetään tyhjään objektiin hierarkiassa.
+    //Tämä ampuu säteen, joka triggerin perusteella suorittaa toiminnon
 
    	public int rayLength = 2;
 
@@ -16,8 +16,7 @@ public class RaycastSend : MonoBehaviour {
 	{                
         var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 
-        if (Physics.Raycast(ray, out hit, rayLength))
-       
+        if (Physics.Raycast(ray, out hit, rayLength))       
         { 
             if (hit.collider.tag =="door")
             {
@@ -29,9 +28,10 @@ public class RaycastSend : MonoBehaviour {
                     }
                 }
             }
+
             if (hit.collider.tag== "button")
             {
-                Debug.Log("hitting");
+                Debug.Log("hitting button");
                 guiShow = true;
                 {
                     if (Input.GetKeyDown("f"))
@@ -49,6 +49,18 @@ public class RaycastSend : MonoBehaviour {
                     if (Input.GetKeyDown("f"))
                     {
                         hit.collider.transform.parent.GetComponent<RayCastLift>().UseLift();
+                    }
+                }
+            }
+
+            if (hit.collider.tag == "interaction")
+            {
+                Debug.Log("hitting interactable object");
+                guiShow = true;
+                {
+                    if (Input.GetKeyDown("f"))
+                    {
+                        hit.collider.transform.GetComponent<RayCastInteract>().Interact();
                     }
                 }
             }
@@ -98,6 +110,14 @@ public class RaycastSend : MonoBehaviour {
 
                 GUI.Box(new Rect(Screen.width / 2, Screen.height / 2, 100, 25), "Close");
                 //Debug.Log("Available to close door");
+            }
+        }
+
+        if (hit.collider.tag == "interaction")
+        {
+            if (guiShow == true && hit.collider.GetComponent<RayCastInteract>().isInteractable == true)
+            {
+                GUI.Box(new Rect(Screen.width / 2, Screen.height / 2, 100, 25), "Turn on");                
             }
         }
     }

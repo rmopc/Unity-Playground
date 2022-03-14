@@ -10,9 +10,7 @@ public class RayCastDoor : MonoBehaviour
     public AudioClip doorOpen;
 	public AudioClip doorClose;
     public AudioClip doorLocked;
-    public GameObject door; // voiko tän skippaa jos startissa määrittelee audiosourcen lailla oven? tuskinpa lol
-
-	
+    public GameObject door; 	
 
       
 	void Start () 
