@@ -1,27 +1,29 @@
 ﻿using System.Collections;
 using UnityEngine;
-// Tämä skripti liitetään siihen objektiin, joka....
+// Tämä skripti liitetään siihen objektiin, josta halutaan aktivoida asia tai toiminto.
 // Skriptin tarkoitus on käsitellä objekteja, jotka aktivoidaan vain kerran.
 public class RayCastInteract : MonoBehaviour
 {
-
+    [HideInInspector]
     public bool isInteractable = true;
     public enum Type { Generator, Tips, Dibs} //luodaan dropdown valittavista interaktio-tyypeistä
     public Type type;   
     public AudioSource audioSource; //public siksi, että voi määritellä jos esim napista painaa oven auki, joka on toisaalla
-    public AudioClip interaction;
-    public AudioClip generatorStart;
+    public AudioClip interaction;   
     public GameObject interactableObject;
+
+    [Header("Generator setup")]
+    public AudioClip generatorStart;
     public GameObject roofLights;
     private Light[] lightComponent;
+    public Material lightEmission;
 
 
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
-        roofLights = GameObject.Find("Point Light");
-        //lightComponent = roofLights.GetComponent<Light>();
         lightComponent = roofLights.GetComponentsInChildren<Light>();
+        lightEmission.DisableKeyword("_EMISSION");
     }
 
     public void Interact()
@@ -36,6 +38,7 @@ public class RayCastInteract : MonoBehaviour
                     audioSource.PlayOneShot(generatorStart, 0.40f);
                     isInteractable = false;
                     break;
+
                 default:                    
                     break;
             }
@@ -45,9 +48,10 @@ public class RayCastInteract : MonoBehaviour
     {
         yield return new WaitForSeconds(3f);        
         interactableObject.SetActive(true);
-        for(int i = 0; i < lightComponent.Length; i++)
+        lightEmission.EnableKeyword("_EMISSION");
+        foreach (Light light in lightComponent)
         {
-            lightComponent[i].enabled = true;
-        }
+            light.enabled = true;
+        } 
     }
 }

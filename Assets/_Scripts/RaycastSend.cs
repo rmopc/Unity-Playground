@@ -83,6 +83,7 @@ public class RaycastSend : MonoBehaviour {
                 }
                 else if (hit.collider.GetComponent<Animation>().isPlaying == false)
                 {
+                    //GUI.skin.box.normal.textColor = Color.red; ÄLÄ KÄYTÄ! muuttaa pysyvästi muidenkin värit.
                     GUI.Box(new Rect(Screen.width / 2, Screen.height / 2, 100, 25), "Locked");
                 }
             }
