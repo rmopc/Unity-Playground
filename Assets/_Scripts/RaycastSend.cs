@@ -118,7 +118,7 @@ public class RaycastSend : MonoBehaviour {
         {
             if (guiShow == true && hit.collider.GetComponent<RayCastInteract>().isInteractable == true)
             {
-                GUI.Box(new Rect(Screen.width / 2, Screen.height / 2, 100, 25), "Turn on");                
+                GUI.Box(new Rect(Screen.width / 2, Screen.height / 2, 100, 25), "Use");                
             }
         }
     }

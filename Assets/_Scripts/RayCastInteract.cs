@@ -6,10 +6,10 @@ public class RayCastInteract : MonoBehaviour
 {
     [HideInInspector]
     public bool isInteractable = true;
-    public enum Type { Generator, Tips, Dibs} //luodaan dropdown valittavista interaktio-tyypeistä
+    public enum Type { Generator, Gate, Dibs} //luodaan dropdown valittavista interaktio-tyypeistä
     public Type type;   
     public AudioSource audioSource; //public siksi, että voi määritellä jos esim napista painaa oven auki, joka on toisaalla
-    public AudioClip interaction;   
+    public AudioClip interactionSound;   
     public GameObject interactableObject;
 
     [Header("Generator setup")]
@@ -18,12 +18,24 @@ public class RayCastInteract : MonoBehaviour
     private Light[] lightComponent;
     public Material lightEmission;
 
+    [Header("Gate setup")]    
+    public AudioClip openSound;    
+
+    void Awake()
+    {
+        if (roofLights == null)
+            roofLights = null;
+            lightComponent = null;
+    }
 
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
-        lightComponent = roofLights.GetComponentsInChildren<Light>();
-        lightEmission.DisableKeyword("_EMISSION");
+        if (roofLights != null)
+        {
+            lightComponent = roofLights.GetComponentsInChildren<Light>();
+            lightEmission.DisableKeyword("_EMISSION");
+        }
     }
 
     public void Interact()
@@ -33,12 +45,16 @@ public class RayCastInteract : MonoBehaviour
             switch (type)
             {
                 case Type.Generator:                    
-                    audioSource.PlayOneShot(interaction, 0.25f);
+                    audioSource.PlayOneShot(interactionSound, 0.25f);
                     StartCoroutine(GeneratorTime());
                     audioSource.PlayOneShot(generatorStart, 0.40f);
                     isInteractable = false;
                     break;
-
+                case Type.Gate:
+                    interactableObject.GetComponent<Animation>().Play("Open");
+                    audioSource.PlayOneShot(interactionSound, 0.05f);
+                    isInteractable = false;
+                    break;
                 default:                    
                     break;
             }

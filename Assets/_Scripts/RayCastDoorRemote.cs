@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using UnityEngine;
 /*
+ Käytä tätä ensisijassa sellaiseen objektiin, jossa Animator-komponentti.
 Tämä skripti liitetään siihen objektiin, josta halutaan avata ovi. GameObject door:iin määritellään inspectorissa se kohde, mikä avataan
 Remote-script, eli nappiin/vipuun menee TÄMÄ script, ja inspectorista määrätään se kohde, mikä avataan
 Huom secondButton, eli jos on tarve saada useasta napista kontrolloida samaa ovea.
@@ -20,11 +21,14 @@ public class RayCastDoorRemote : MonoBehaviour
 
     private AudioSource audioSourceDoor; // ovesta kuuluva ääni
     private AudioSource audioSourceButton; //oven avaamisnapista kuuluva ääni
-          
-	void Start () 
+    private Animator dooranim;
+
+
+    void Start () 
 	{
         audioSourceDoor = door.GetComponent<AudioSource>();
         audioSourceButton = GetComponent<AudioSource>();
+        dooranim = door.GetComponent<Animator>();
     }
 
 
@@ -35,7 +39,7 @@ public class RayCastDoorRemote : MonoBehaviour
         {
             audioSourceDoor.PlayOneShot(doorOpen, 0.25f);
             audioSourceButton.PlayOneShot(buttonClick, 0.25f);
-            door.GetComponent<Animator>().SetBool("open",true);
+            dooranim.SetBool("open",true);
             isOpen = true;
             secondButton.GetComponent<RayCastDoorRemote>().isOpen = true;
 
@@ -49,7 +53,7 @@ public class RayCastDoorRemote : MonoBehaviour
         {
             audioSourceDoor.PlayOneShot(doorClose, 0.25f);
             audioSourceButton.PlayOneShot(buttonClick, 0.25f);
-            door.GetComponent<Animator>().SetBool("open", false);
+            dooranim.SetBool("open", false);
             isOpen = false;
             secondButton.GetComponent<RayCastDoorRemote>().isOpen = false;
         }
