@@ -53,6 +53,7 @@
   <ItemGroup>
      <Compile Include="Assets\_Scripts\Animointi testiscript.cs" />
      <Compile Include="Assets\_Scripts\breakablelight.cs" />
+     <Compile Include="Assets\_Scripts\ButtonClickController.cs" />
      <Compile Include="Assets\_Scripts\carManager.cs" />
      <Compile Include="Assets\_Scripts\carManager2.cs" />
      <Compile Include="Assets\_Scripts\crate.cs" />
@@ -80,6 +81,7 @@
      <Compile Include="Assets\AllStarCharacterLibray\Scripts\Outfitter.cs" />
      <Compile Include="Assets\AllStarCharacterLibray\Scripts\RootMotionOff.cs" />
      <Compile Include="Assets\AllStarCharacterLibray\Scripts\SkinnedMeshCombiner.cs" />
+     <Compile Include="Assets\DisplayControl.cs" />
      <Compile Include="Assets\DOOR SCRIPT\DEMO\MouseLook.cs" />
      <Compile Include="Assets\DOOR SCRIPT\DEMO\PlayerMovement.cs" />
      <Compile Include="Assets\DOOR SCRIPT\SCRIPTS\Detection.cs" />
