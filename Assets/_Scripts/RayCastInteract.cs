@@ -23,17 +23,19 @@ public class RayCastInteract : MonoBehaviour
     public AudioClip openSound;
 
     [Header("Door Panel Setup")]
-    //public GameObject player;
-    
+    public GameObject player;    
     public Camera panelCamera;    
     public GameObject objectToUnlock;
+    public GameObject buttons;
+    public bool usingPanel = false;    
+    public bool usedOnce = false; //koska mm. FPS-controlleri käyttää timescalea, on tehtävä erillinen boolean jotta update suorittaa toiminnon ainoastaan kerran.
 
 
     void Awake()
     {
-        if (roofLights == null) 
+        if (roofLights == null)
             roofLights = null;
-            lightComponent = null;
+        lightComponent = null;
 
         if (panelCamera == null) //ratkaistava viel tämä, herjaa inspertorissa kaikista itemeistä jossa tätä ei ole määritelty
             panelCamera = null;
@@ -43,24 +45,32 @@ public class RayCastInteract : MonoBehaviour
 
     void Start()
     {
-        audioSource = GetComponent<AudioSource>();
+        lightEmission.DisableKeyword("_EMISSION");
         if (roofLights != null)
         {
             lightComponent = roofLights.GetComponentsInChildren<Light>();
             lightEmission.DisableKeyword("_EMISSION");
         }
-
-        //panelCamera = GetComponentInChildren<Camera>();
-        //buttonController = GameObject.Find("buttons").GetComponentInChildren<ButtonClickController>().unlocked;
-
-        
     }
 
     void Update()
     {
-        if (objectToUnlock.GetComponent<RayCastDoor>().isLocked == false)
+        if (usedOnce == false && objectToUnlock.GetComponent<RayCastDoor>().isLocked == false)
         {
             panelCamera.enabled = false;
+            usingPanel = false;
+            Time.timeScale = 1.0f;
+            player.SetActive(true);
+            usedOnce = true;
+            PanelDisable();
+        }
+
+        if (usingPanel == true && Input.GetKeyDown(KeyCode.E))
+        {
+            panelCamera.enabled = false;
+            usingPanel = false;
+            Time.timeScale = 1.0f;
+            player.SetActive(true);
         }
     }
 
@@ -72,7 +82,7 @@ public class RayCastInteract : MonoBehaviour
             {
                 case Type.Generator:                    
                     audioSource.PlayOneShot(interactionSound, 0.25f);
-                    StartCoroutine(GeneratorTime());
+                    StartGenerator();
                     audioSource.PlayOneShot(generatorStart, 0.40f);
                     isInteractable = false;
                     break;
@@ -83,11 +93,18 @@ public class RayCastInteract : MonoBehaviour
                     break;
                 case Type.DoorPanel:
                     PanelInteraction();
-                    isInteractable = false;
+                    if (usedOnce == true)
+                    {
+                        isInteractable = false;
+                    }
                     break;
                 default:                    
                     break;
             }
+    }
+    private void StartGenerator()
+    {
+        StartCoroutine(GeneratorTime());
     }
 
      IEnumerator GeneratorTime()
@@ -103,14 +120,19 @@ public class RayCastInteract : MonoBehaviour
 
     public void PanelInteraction()
     {
-        
-        if (panelIsUsable == true && objectToUnlock.GetComponent<RayCastDoor>().isLocked == true)
-        {            
-            Cursor.visible = true;
-            Cursor.lockState = CursorLockMode.None;
-            panelCamera.enabled = true;           
-            //player.SetActive(false);            
-        }
 
+        if (panelIsUsable == true && objectToUnlock.GetComponent<RayCastDoor>().isLocked == true)
+        {
+            panelCamera.enabled = true;
+            Time.timeScale = 0.0f;
+            usingPanel = true;
+            player.SetActive(false);
+        }
+    }
+
+    public void PanelDisable() //otetaan paneli pois käytöstä oikean koodin jälkeen
+    {
+        panelIsUsable = false;
+        buttons.SetActive(false);
     }
 }

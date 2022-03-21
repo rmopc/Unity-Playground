@@ -53,7 +53,7 @@ public class RaycastSend : MonoBehaviour {
                 }
             }
 
-            if (hit.collider.tag == "interaction")
+            if (hit.collider.tag == "interaction" && hit.collider.transform.GetComponent<RayCastInteract>().usedOnce == false)
             {
                 Debug.Log("hitting interactable object");
                 guiShow = true;
@@ -64,10 +64,15 @@ public class RaycastSend : MonoBehaviour {
                     }
                 }
             }
+
+            if (Time.timeScale == 0.0f)
+            {
+                guiShow = false;
+            }
         }
         else
         {
-            guiShow = false;
+            guiShow = false; //ei tällä hetkellä tee mitään
         }
     }
     void OnGUI() //heittää tota "object not set to an instance" välillä, mistä johtuu?

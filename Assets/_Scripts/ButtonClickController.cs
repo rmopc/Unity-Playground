@@ -14,16 +14,18 @@ public class ButtonClickController : MonoBehaviour {
 	public AudioClip clickSound;
 	public AudioClip correctCodeSound;
 	public AudioClip wrongCodeSound;
+	public Material lightEmission;
 
 	void Start () 
 	{
-		
-	}
+        lightEmission.DisableKeyword("_EMISSION");
+    }
 	
 	
 	void Update () 
 	{
 		//Debug.Log(playerCode);
+		//lightEmission.DisableKeyword("_EMISSION");
 
 		if (totalDigits == 4)
         {
@@ -53,5 +55,6 @@ public class ButtonClickController : MonoBehaviour {
 		audioSource.PlayOneShot(clickSound, 0.25f);
 		playerCode += gameObject.name;
 		totalDigits += 1;
-    }
+		lightEmission.EnableKeyword("_EMISSION");
+	}
 }
