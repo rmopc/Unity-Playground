@@ -7,6 +7,7 @@ public class ButtonClickController : MonoBehaviour {
 	public static string correctCode = "0016";
 	public static string playerCode = "";
 	public static int totalDigits = 0;
+	public bool unlocked = false;
 
 	public GameObject objectToUnlock;
 	public AudioSource audioSource;
@@ -33,6 +34,7 @@ public class ButtonClickController : MonoBehaviour {
 				objectToUnlock.GetComponent<RayCastDoor>().isLocked = false;
 				playerCode = "";
 				totalDigits = 0;
+				unlocked = true;
 			}
 
             else
