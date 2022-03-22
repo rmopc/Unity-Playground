@@ -53,7 +53,7 @@ public class RaycastSend : MonoBehaviour {
                 }
             }
 
-            if (hit.collider.tag == "interaction" && hit.collider.transform.GetComponent<RayCastInteract>().usedOnce == false)
+            if (hit.collider.tag == "interaction" /*&& hit.collider.transform.GetComponent<RayCastInteract>().usedOnce == false*/) //Tsekkaa tämä!
             {
                 Debug.Log("hitting interactable object");
                 guiShow = true;
@@ -61,6 +61,18 @@ public class RaycastSend : MonoBehaviour {
                     if (Input.GetKeyDown("f"))
                     {
                         hit.collider.transform.GetComponent<RayCastInteract>().Interact();
+                    }
+                }
+            }
+
+            if (hit.collider.tag == "generator" /*&& hit.collider.transform.GetComponent<RayCastInteract>().usedOnce == false*/) //Tsekkaa tämä!
+            {
+                Debug.Log("hitting interactable object");
+                guiShow = true;
+                {
+                    if (Input.GetKeyDown("f"))
+                    {
+                        hit.collider.transform.GetComponent<GeneratorManager>().Interact();
                     }
                 }
             }
@@ -124,6 +136,14 @@ public class RaycastSend : MonoBehaviour {
             if (guiShow == true && hit.collider.GetComponent<RayCastInteract>().isInteractable == true)
             {
                 GUI.Box(new Rect(Screen.width / 2, Screen.height / 2, 100, 25), "Use");                
+            }
+        }
+
+        if (hit.collider.tag == "generator")
+        {
+            if (guiShow == true && hit.collider.GetComponent<GeneratorManager>().isInteractable == true)
+            {
+                GUI.Box(new Rect(Screen.width / 2, Screen.height / 2, 100, 25), "Use");
             }
         }
     }

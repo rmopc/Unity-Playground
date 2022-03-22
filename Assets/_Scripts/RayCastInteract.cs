@@ -7,50 +7,30 @@ public class RayCastInteract : MonoBehaviour
     [HideInInspector]
     public bool isInteractable = true;
     private bool panelIsUsable = true;
-    public enum Type { Generator, Gate, DoorPanel} //luodaan dropdown valittavista interaktio-tyypeistä
-    public Type type;   
+    public enum Type { Generator, Gate, DoorPanel } //luodaan dropdown valittavista interaktio-tyypeistä
+    public Type type;
     public AudioSource audioSource; //public siksi, että voi määritellä jos esim napista painaa oven auki, joka on toisaalla
-    public AudioClip interactionSound;   
+    public AudioClip interaction;
     public GameObject interactableObject;
 
-    [Header("Generator setup")]
-    public AudioClip generatorStart;
-    public GameObject roofLights;
-    private Light[] lightComponent;
-    public Material lightEmission;
-
-    [Header("Gate setup")]    
+    [Header("Gate setup")]
     public AudioClip openSound;
 
     [Header("Door Panel Setup")]
-    public GameObject player;    
-    public Camera panelCamera;    
+    public GameObject player;
+    public Camera panelCamera;
     public GameObject objectToUnlock;
     public GameObject buttons;
-    public bool usingPanel = false;    
+    public bool usingPanel = false;
     public bool usedOnce = false; //koska mm. FPS-controlleri käyttää timescalea, on tehtävä erillinen boolean jotta update suorittaa toiminnon ainoastaan kerran.
+                                                         //Tarkista ettei sotke muita scriptejä ja huomioi tämä RayCastSend scriptissä!
 
-
-    void Awake()
-    {
-        if (roofLights == null)
-            roofLights = null;
-        lightComponent = null;
-
-        if (panelCamera == null) //ratkaistava viel tämä, herjaa inspertorissa kaikista itemeistä jossa tätä ei ole määritelty
-            panelCamera = null;
-
-        panelCamera.enabled = false;
-    }
 
     void Start()
     {
-        lightEmission.DisableKeyword("_EMISSION");
-        if (roofLights != null)
-        {
-            lightComponent = roofLights.GetComponentsInChildren<Light>();
-            lightEmission.DisableKeyword("_EMISSION");
-        }
+        panelCamera.enabled = false;
+        audioSource = GetComponent<AudioSource>();
+        
     }
 
     void Update()
@@ -80,15 +60,9 @@ public class RayCastInteract : MonoBehaviour
         if (isInteractable)
             switch (type)
             {
-                case Type.Generator:                    
-                    audioSource.PlayOneShot(interactionSound, 0.25f);
-                    StartGenerator();
-                    audioSource.PlayOneShot(generatorStart, 0.40f);
-                    isInteractable = false;
-                    break;
                 case Type.Gate:
                     interactableObject.GetComponent<Animation>().Play("Open");
-                    audioSource.PlayOneShot(interactionSound, 0.05f);
+                    audioSource.PlayOneShot(interaction, 0.05f);
                     isInteractable = false;
                     break;
                 case Type.DoorPanel:
@@ -98,30 +72,15 @@ public class RayCastInteract : MonoBehaviour
                         isInteractable = false;
                     }
                     break;
-                default:                    
+                default:
                     break;
             }
-    }
-    private void StartGenerator()
-    {
-        StartCoroutine(GeneratorTime());
-    }
-
-     IEnumerator GeneratorTime()
-    {
-        yield return new WaitForSeconds(3f);        
-        interactableObject.SetActive(true);
-        lightEmission.EnableKeyword("_EMISSION");
-        foreach (Light light in lightComponent)
-        {
-            light.enabled = true;
-        } 
     }
 
     public void PanelInteraction()
     {
 
-        if (panelIsUsable == true && objectToUnlock.GetComponent<RayCastDoor>().isLocked == true)
+        if (panelIsUsable == true && objectToUnlock.GetComponent<RayCastDoor>().isLocked == true) // HUOM! Script ei toimi jos ovea ei ole lukittu inspectorissa tai muulla tavoin!
         {
             panelCamera.enabled = true;
             Time.timeScale = 0.0f;
