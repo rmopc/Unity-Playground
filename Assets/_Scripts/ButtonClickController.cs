@@ -8,6 +8,7 @@ public class ButtonClickController : MonoBehaviour {
 	public static string playerCode = "";
 	public static int totalDigits = 0;
 	public bool unlocked = false;
+	private bool clicked;
 
 	public GameObject objectToUnlock;
 	public AudioSource audioSource;
@@ -19,13 +20,17 @@ public class ButtonClickController : MonoBehaviour {
 	void Start () 
 	{
         lightEmission.DisableKeyword("_EMISSION");
+		clicked = false;
     }
 	
 	
 	void Update () 
-	{
-		//Debug.Log(playerCode);
-		//lightEmission.DisableKeyword("_EMISSION");
+	{        
+        if (clicked == true)
+        {
+			lightEmission.DisableKeyword("_EMISSION");
+			clicked = false;
+		}		
 
 		if (totalDigits == 4)
         {
@@ -37,6 +42,7 @@ public class ButtonClickController : MonoBehaviour {
 				playerCode = "";
 				totalDigits = 0;
 				unlocked = true;
+				
 			}
 
             else
@@ -44,17 +50,24 @@ public class ButtonClickController : MonoBehaviour {
 				Debug.Log("Wrong code entered");
 				audioSource.PlayOneShot(wrongCodeSound, 0.25f);
 				playerCode = "";
-				totalDigits = 0;
-				
-            }
-        }
+				totalDigits = 0;				
+			}
+			clicked = true;
+		}		
 	}
 
 	void OnMouseDown()
     {
 		audioSource.PlayOneShot(clickSound, 0.25f);
 		playerCode += gameObject.name;
-		totalDigits += 1;
+		totalDigits += 1;		
+		StartCoroutine(ClickTime());
+	}
+
+	IEnumerator ClickTime()
+    {
 		lightEmission.EnableKeyword("_EMISSION");
+		yield return new WaitForSeconds(1f);
+		clicked = true;
 	}
 }

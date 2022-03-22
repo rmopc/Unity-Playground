@@ -53,7 +53,7 @@ public class RaycastSend : MonoBehaviour {
                 }
             }
 
-            if (hit.collider.tag == "interaction" /*&& hit.collider.transform.GetComponent<RayCastInteract>().usedOnce == false*/) //Tsekkaa tämä!
+            if (hit.collider.tag == "interaction")
             {
                 Debug.Log("hitting interactable object");
                 guiShow = true;
@@ -65,7 +65,7 @@ public class RaycastSend : MonoBehaviour {
                 }
             }
 
-            if (hit.collider.tag == "generator" /*&& hit.collider.transform.GetComponent<RayCastInteract>().usedOnce == false*/) //Tsekkaa tämä!
+            if (hit.collider.tag == "generator")
             {
                 Debug.Log("hitting interactable object");
                 guiShow = true;
@@ -84,7 +84,7 @@ public class RaycastSend : MonoBehaviour {
         }
         else
         {
-            guiShow = false; //ei tällä hetkellä tee mitään
+            guiShow = false; //ei tällä hetkellä tee mitään?
         }
     }
     void OnGUI() //heittää tota "object not set to an instance" välillä, mistä johtuu?
@@ -133,7 +133,7 @@ public class RaycastSend : MonoBehaviour {
 
         if (hit.collider.tag == "interaction")
         {
-            if (guiShow == true && hit.collider.GetComponent<RayCastInteract>().isInteractable == true)
+            if (guiShow == true && hit.collider.transform.GetComponent<RayCastInteract>().usedOnce == false) //Huomioi boolean-tarkistus
             {
                 GUI.Box(new Rect(Screen.width / 2, Screen.height / 2, 100, 25), "Use");                
             }
@@ -143,7 +143,7 @@ public class RaycastSend : MonoBehaviour {
         {
             if (guiShow == true && hit.collider.GetComponent<GeneratorManager>().isInteractable == true)
             {
-                GUI.Box(new Rect(Screen.width / 2, Screen.height / 2, 100, 25), "Use");
+                GUI.Box(new Rect(Screen.width / 2, Screen.height / 2, 100, 25), "Turn on");
             }
         }
     }

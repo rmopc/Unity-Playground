@@ -7,7 +7,7 @@ public class RayCastInteract : MonoBehaviour
     [HideInInspector]
     public bool isInteractable = true;
     private bool panelIsUsable = true;
-    public enum Type { Generator, Gate, DoorPanel } //luodaan dropdown valittavista interaktio-tyypeistä
+    public enum Type { Gate, DoorPanel } //luodaan dropdown valittavista interaktio-tyypeistä
     public Type type;
     public AudioSource audioSource; //public siksi, että voi määritellä jos esim napista painaa oven auki, joka on toisaalla
     public AudioClip interaction;
@@ -23,7 +23,7 @@ public class RayCastInteract : MonoBehaviour
     public GameObject buttons;
     public bool usingPanel = false;
     public bool usedOnce = false; //koska mm. FPS-controlleri käyttää timescalea, on tehtävä erillinen boolean jotta update suorittaa toiminnon ainoastaan kerran.
-                                                         //Tarkista ettei sotke muita scriptejä ja huomioi tämä RayCastSend scriptissä!
+                                                         //Varmista ettei sotke muita scriptejä ja huomioi tämä RayCastSend scriptissä!
 
 
     void Start()
@@ -64,6 +64,7 @@ public class RayCastInteract : MonoBehaviour
                     interactableObject.GetComponent<Animation>().Play("Open");
                     audioSource.PlayOneShot(interaction, 0.05f);
                     isInteractable = false;
+                    usedOnce = true;
                     break;
                 case Type.DoorPanel:
                     PanelInteraction();
