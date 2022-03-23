@@ -34,7 +34,7 @@ public class GeneratorManager : MonoBehaviour
     {
         if (isInteractable)
         {
-            audioSource.PlayOneShot(interaction, 0.25f);
+            audioSource.PlayOneShot(interaction, 0.5f);
             StartCoroutine(GeneratorTime());
             audioSource.PlayOneShot(generatorStart, 0.40f);
             isInteractable = false;

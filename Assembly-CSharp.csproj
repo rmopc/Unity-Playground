@@ -52,6 +52,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\_Scripts\Animointi testiscript.cs" />
+     <Compile Include="Assets\_Scripts\AudioFader.cs" />
      <Compile Include="Assets\_Scripts\breakablelight.cs" />
      <Compile Include="Assets\_Scripts\ButtonClickController.cs" />
      <Compile Include="Assets\_Scripts\carManager.cs" />
@@ -76,6 +77,7 @@
      <Compile Include="Assets\_Scripts\vanhat &amp; ei käytössä\DoorHandler.cs" />
      <Compile Include="Assets\_Scripts\vanhat &amp; ei käytössä\RayCastDoorWANHA.cs" />
      <Compile Include="Assets\_Scripts\Wander.cs" />
+     <Compile Include="Assets\_Scripts\WindAudioManager.cs" />
      <Compile Include="Assets\AllStarCharacterLibray\Scripts\CamTarget.cs" />
      <Compile Include="Assets\AllStarCharacterLibray\Scripts\CharacterDemoController.cs" />
      <Compile Include="Assets\AllStarCharacterLibray\Scripts\MouseOrbit.cs" />
@@ -183,6 +185,13 @@
      <Compile Include="Assets\pickup\scripts\hands.cs" />
      <Compile Include="Assets\pickup\scripts\help.cs" />
      <Compile Include="Assets\pickup\scripts\skidMarks.cs" />
+     <Compile Include="Assets\PyroParticles\Prefab\Script\FireBaseScript.cs" />
+     <Compile Include="Assets\PyroParticles\Prefab\Script\FireCollisionForwardScript.cs" />
+     <Compile Include="Assets\PyroParticles\Prefab\Script\FireConstantBaseScript.cs" />
+     <Compile Include="Assets\PyroParticles\Prefab\Script\FireLightScript.cs" />
+     <Compile Include="Assets\PyroParticles\Prefab\Script\FireProjectileScript.cs" />
+     <Compile Include="Assets\PyroParticles\Prefab\Script\MeteorSwarmScript.cs" />
+     <Compile Include="Assets\PyroParticles\Prefab\Script\SingleLineAttribute.cs" />
      <Compile Include="Assets\RFPSP\Image Effects\Environment\Water (Basic)\Scripts\WaterBasic.cs" />
      <Compile Include="Assets\RFPSP\Image Effects\Scripts\Antialiasing.cs" />
      <Compile Include="Assets\RFPSP\Image Effects\Scripts\Bloom.cs" />
@@ -564,6 +573,7 @@
      <None Include="Assets\MeshMaker\Parts\Parts.txt" />
      <None Include="Assets\Flooded_Grounds\PostProcessing\Resources\Shaders\Uber.shader" />
      <None Include="Assets\pickup 1980\effects\FXAA\Shaders\Fxaa3.shader" />
+     <None Include="Assets\PyroParticles\Prefab\Materials\AdditiveTintable.shader" />
      <None Include="Assets\RFPSP\Image Effects\Shaders\Contrast Stretch\Apply.shader" />
      <None Include="Assets\texturepackA\shaders\bumpedspecmap.shader" />
      <None Include="Assets\WeatherMaker\Prefab\Shaders\WeatherMakerLightningBoltShader.shader" />
@@ -640,6 +650,7 @@
      <None Include="Assets\Modern Doors Pack\Scripts\!Setup Video Link!.txt" />
      <None Include="Assets\MeshMaker\Shapes\Primitives\Ellipse.xml" />
      <None Include="Assets\Universal Sound FX\version_history.txt" />
+     <None Include="Assets\PyroParticles\Readme.txt" />
      <None Include="Assets\RFPSP\Image Effects\Shaders\GlobalFog.shader" />
      <None Include="Assets\MeshMaker\SVGFiles\test2.txt" />
      <None Include="Assets\RFPSP\Image Effects\Shaders\Contrast Stretch\Luminance.shader" />
