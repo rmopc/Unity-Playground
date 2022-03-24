@@ -15,7 +15,7 @@ public class GeneratorManager : MonoBehaviour
     public GameObject roofLights;
     private Light[] lightComponent;
     public Material lightEmission;
-
+    public GameObject[] arrayPanels;
     
     void Start () 
 	{
@@ -25,10 +25,6 @@ public class GeneratorManager : MonoBehaviour
     }
 	
 	
-	void Update () 
-	{
-		
-	}
 
     public void Interact()
     {
@@ -38,6 +34,10 @@ public class GeneratorManager : MonoBehaviour
             StartCoroutine(GeneratorTime());
             audioSource.PlayOneShot(generatorStart, 0.40f);
             isInteractable = false;
+            foreach (GameObject panel in arrayPanels)
+            {
+                panel.GetComponent<RayCastInteract>().arrayIsUsable = true;
+            }
         }
     }
 

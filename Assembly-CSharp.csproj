@@ -65,6 +65,7 @@
      <Compile Include="Assets\_Scripts\EnterVehicle.cs" />
      <Compile Include="Assets\_Scripts\explosive.cs" />
      <Compile Include="Assets\_Scripts\GeneratorManager.cs" />
+     <Compile Include="Assets\_Scripts\KeyController.cs" />
      <Compile Include="Assets\_Scripts\Ladder.cs" />
      <Compile Include="Assets\_Scripts\Lightflicker.cs" />
      <Compile Include="Assets\_Scripts\MoveTo.cs" />

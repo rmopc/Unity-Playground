@@ -7,10 +7,18 @@ public class RaycastSend : MonoBehaviour {
     //Tämä ampuu säteen, joka triggerin perusteella suorittaa toiminnon
 
    	public int rayLength = 2;
+    public GameObject keyController;
 
     bool guiShow = false;
 
     RaycastHit hit;
+
+    private KeyController kc;
+
+    void Start()
+    {
+        kc = keyController.GetComponent<KeyController>();
+    }
 
     void Update() 
 	{                
@@ -75,6 +83,31 @@ public class RaycastSend : MonoBehaviour {
                         hit.collider.transform.GetComponent<GeneratorManager>().Interact();
                     }
                 }
+            }
+
+            if (hit.collider.tag == "key")
+            {
+                Debug.Log("hitting interactable object");
+                guiShow = true;
+                {
+                    if (Input.GetKeyDown("f"))
+                    {
+                        //Destroy(hit.collider.gameObject);
+                        hit.collider.gameObject.SetActive(false);
+                        kc.hasCarKey = true;                        
+                    }
+                }
+            }
+
+            if (hit.collider.tag == "cardoor")
+            {
+                guiShow = true;
+                //{
+                //    if (Input.GetKeyDown("f"))
+                //    {
+                //        hit.collider.transform.parent.GetComponent<RayCastDoor>().OpenDoor();
+                //    }
+                //}
             }
 
             if (Time.timeScale == 0.0f)
@@ -144,6 +177,22 @@ public class RaycastSend : MonoBehaviour {
             if (guiShow == true && hit.collider.GetComponent<GeneratorManager>().isInteractable == true)
             {
                 GUI.Box(new Rect(Screen.width / 2, Screen.height / 2, 100, 25), "Turn on");
+            }
+        }
+
+        if (hit.collider.tag == "key")
+        {
+            if (guiShow == true /*&& hit.collider.GetComponent<GeneratorManager>().isInteractable == true*/)
+            {
+                GUI.Box(new Rect(Screen.width / 2, Screen.height / 2, 100, 25), "Pick up");
+            }
+        }
+
+        if (hit.collider.tag == "cardoor")
+        {
+            if (guiShow == true)
+            {
+                GUI.Box(new Rect(Screen.width / 2, Screen.height / 2, 100, 25), "Pick up");
             }
         }
     }

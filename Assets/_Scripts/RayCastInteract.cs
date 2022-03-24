@@ -26,13 +26,13 @@ public class RayCastInteract : MonoBehaviour
                                   //Varmista ettei sotke muita scriptejä ja huomioi tämä RayCastSend scriptissä!
 
     [Header("Door Array Setup")]
-    public GameObject[] doors;
+    public bool arrayIsUsable = false;
+    public GameObject[] doors;    
 
     void Start()
     {
         panelCamera.enabled = false;
-        audioSource = GetComponent<AudioSource>();
-        
+        audioSource = GetComponent<AudioSource>();        
     }
 
     void Update()
@@ -75,15 +75,17 @@ public class RayCastInteract : MonoBehaviour
                         isInteractable = false;
                     }
                     break;
-                case Type.DoorArray:
-                    //doors[1].GetComponent<BasicDoor>().isUsable = true;
-                    audioSource.PlayOneShot(interaction, 0.5f);
-                    foreach (GameObject door in doors)
+                case Type.DoorArray:        
+                    if(arrayIsUsable == true)
                     {
-                        door.GetComponent<BasicDoor>().isUsable = true;
+                        audioSource.PlayOneShot(interaction, 0.5f);
+                        foreach (GameObject door in doors)
+                        {
+                            door.GetComponent<BasicDoor>().isUsable = true;
+                        }
+                        isInteractable = false;
+                        usedOnce = true;
                     }
-                    isInteractable = false;
-                    usedOnce = true;
                     break;
                 default:
                     break;
