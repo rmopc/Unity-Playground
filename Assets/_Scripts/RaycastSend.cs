@@ -103,6 +103,12 @@ public class RaycastSend : MonoBehaviour {
                             hit.collider.gameObject.SetActive(false);
                             kc.hasOfficeKeys = true;
                         }
+
+                        if (hit.collider.gameObject.name == "keycard blue")
+                        {
+                            hit.collider.gameObject.SetActive(false);
+                            kc.hasBlueKeyCard = true;
+                        }                        
                     }
                 }
             }
