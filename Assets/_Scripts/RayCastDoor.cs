@@ -5,6 +5,8 @@ public class RayCastDoor : MonoBehaviour
 {
 
 	public bool isOpen = false;
+    public bool needsKey = false;
+    public bool hasKey = false;
     public bool isLocked = false;
     public AudioSource audioSource; //public siksi, että voi määritellä jos esim napista painaa oven auki, joka on toisaalla
     public AudioClip doorOpen;
@@ -20,25 +22,52 @@ public class RayCastDoor : MonoBehaviour
 
     public void OpenDoor()
     {
-        if (door.GetComponent<Animation>().isPlaying == false && isLocked == false)
+        if (needsKey == false)
         {
-            isOpen = !isOpen;
-            if (isOpen)
+            if (door.GetComponent<Animation>().isPlaying == false && isLocked == false)
             {
-                audioSource.PlayOneShot(doorOpen, 0.25f);
-                door.GetComponent<Animation>().Play("Open");
-                isOpen = true;
+                isOpen = !isOpen;
+                if (isOpen)
+                {
+                    audioSource.PlayOneShot(doorOpen, 0.25f);
+                    door.GetComponent<Animation>().Play("Open");
+                    isOpen = true;
+                }
+                else
+                {
+                    audioSource.PlayOneShot(doorClose, 0.25f);
+                    door.GetComponent<Animation>().Play("Close");
+                    isOpen = false;
+                }
             }
-            else
+            if (isLocked && !audioSource.isPlaying)
             {
-                audioSource.PlayOneShot(doorClose, 0.25f);
-                door.GetComponent<Animation>().Play("Close");
-                isOpen = false;
+                audioSource.PlayOneShot(doorLocked, 0.25f);
             }
         }
-        if (isLocked && !audioSource.isPlaying)
+
+        if (needsKey== true && hasKey == true/* && isLocked == true*/)
         {
-        audioSource.PlayOneShot(doorLocked, 0.25f);               
+            if (door.GetComponent<Animation>().isPlaying == false)
+            {
+                isOpen = !isOpen;
+                if (isOpen)
+                {
+                    audioSource.PlayOneShot(doorOpen, 0.25f);
+                    door.GetComponent<Animation>().Play("Open");
+                    isOpen = true;
+                }
+                else
+                {
+                    audioSource.PlayOneShot(doorClose, 0.25f);
+                    door.GetComponent<Animation>().Play("Close");
+                    isOpen = false;
+                }
+            }
+            if (isLocked && !audioSource.isPlaying)
+            {
+                audioSource.PlayOneShot(doorLocked, 0.25f);
+            }
         }
     }
 }﻿

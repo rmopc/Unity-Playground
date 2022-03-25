@@ -92,9 +92,17 @@ public class RaycastSend : MonoBehaviour {
                 {
                     if (Input.GetKeyDown("f"))
                     {
-                        //Destroy(hit.collider.gameObject);
-                        hit.collider.gameObject.SetActive(false);
-                        kc.hasCarKey = true;                        
+                        if (hit.collider.gameObject.name == "car key")
+                        {
+                            hit.collider.gameObject.SetActive(false);
+                            kc.hasCarKey = true;
+                        }
+
+                        if (hit.collider.gameObject.name == "keys")
+                        {
+                            hit.collider.gameObject.SetActive(false);
+                            kc.hasOfficeKeys = true;
+                        }
                     }
                 }
             }
