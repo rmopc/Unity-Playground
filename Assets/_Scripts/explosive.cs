@@ -2,17 +2,13 @@
 using System.Collections;
 
 public class explosive : MonoBehaviour {
+
 	public float hitPoints = 100f;
 	public Transform spawnobject;
 	public GameObject explosion;
 	public float radius = 3.0f;
 	public float power = 100.0f;
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
+
 	void Update () 
 	{
 		if (hitPoints <= 0)
@@ -31,9 +27,9 @@ public class explosive : MonoBehaviour {
 				}
 			}
 			Destroy (gameObject);
-		}
-	
+		}	
 	}
+
 	public void ApplyDamage (float damage) 
 	{
 		hitPoints = hitPoints - damage;

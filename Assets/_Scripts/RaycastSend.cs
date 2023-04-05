@@ -17,7 +17,10 @@ public class RaycastSend : MonoBehaviour {
 
     void Start()
     {
-        kc = keyController.GetComponent<KeyController>();
+        if (keyController != null) 
+        {
+            kc = keyController.GetComponent<KeyController>();
+        }
     }
 
     void Update() 
@@ -134,79 +137,82 @@ public class RaycastSend : MonoBehaviour {
             guiShow = false; //ei tällä hetkellä tee mitään?
         }
     }
-    void OnGUI() //heittää tota "object not set to an instance" välillä, mistä johtuu?
+    void OnGUI() 
     {
-        if (hit.collider.tag == "door")
+        if (hit.collider != null) //tällä korjattu se, ettei oven kohdalla herjaa nullerroria konsolissa
         {
-            if (guiShow == true && hit.collider.transform.parent.GetComponent<RayCastDoor>().isOpen == false)
+            if (hit.collider.tag == "door")
             {
-                if (hit.collider.GetComponent<Animation>().isPlaying == false && hit.collider.transform.parent.GetComponent<RayCastDoor>().isLocked == false) // tällä estetään, ettei UI-boksi näy koko ajan ja muutu lennosta "open" ja "close" välillä
+                if (guiShow == true && hit.collider.transform.parent.GetComponent<RayCastDoor>().isOpen == false)
+                {
+                    if (hit.collider.GetComponent<Animation>().isPlaying == false && hit.collider.transform.parent.GetComponent<RayCastDoor>().isLocked == false) // tällä estetään, ettei UI-boksi näy koko ajan ja muutu lennosta "open" ja "close" välillä
+                    {
+                        GUI.Box(new Rect(Screen.width / 2, Screen.height / 2, 100, 25), "Open");
+                        //Debug.Log("Available to open door");
+                    }
+                    else if (hit.collider.GetComponent<Animation>().isPlaying == false)
+                    {
+                        //GUI.skin.box.normal.textColor = Color.red; ÄLÄ KÄYTÄ! muuttaa pysyvästi muidenkin värit.
+                        GUI.Box(new Rect(Screen.width / 2, Screen.height / 2, 100, 25), "Locked");
+                    }
+                }
+
+                else if (guiShow == true && hit.collider.transform.parent.GetComponent<RayCastDoor>().isOpen == true)
+                {
+                    if (hit.collider.GetComponent<Animation>().isPlaying == false)
+                    {
+                        GUI.Box(new Rect(Screen.width / 2, Screen.height / 2, 100, 25), "Close");
+                        //Debug.Log("Available to close door");
+                    }
+                }
+            }
+
+            if (hit.collider.tag == "button")
+            {
+                if (guiShow == true && hit.collider.GetComponent<RayCastDoorRemote>().isOpen == false && hit.collider.GetComponent<RayCastDoorRemote>().door.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("closed"))
                 {
                     GUI.Box(new Rect(Screen.width / 2, Screen.height / 2, 100, 25), "Open");
                     //Debug.Log("Available to open door");
                 }
-                else if (hit.collider.GetComponent<Animation>().isPlaying == false)
-                {
-                    //GUI.skin.box.normal.textColor = Color.red; ÄLÄ KÄYTÄ! muuttaa pysyvästi muidenkin värit.
-                    GUI.Box(new Rect(Screen.width / 2, Screen.height / 2, 100, 25), "Locked");
-                }
-            }
 
-            else if (guiShow == true && hit.collider.transform.parent.GetComponent<RayCastDoor>().isOpen == true)
-            {
-                if (hit.collider.GetComponent<Animation>().isPlaying == false)
+                else if (guiShow == true && hit.collider.GetComponent<RayCastDoorRemote>().isOpen == true && hit.collider.GetComponent<RayCastDoorRemote>().door.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("opened"))
                 {
+
                     GUI.Box(new Rect(Screen.width / 2, Screen.height / 2, 100, 25), "Close");
                     //Debug.Log("Available to close door");
                 }
             }
-        }
 
-        if (hit.collider.tag =="button")
-        {
-            if (guiShow == true && hit.collider.GetComponent<RayCastDoorRemote>().isOpen == false && hit.collider.GetComponent<RayCastDoorRemote>().door.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("closed"))
+            if (hit.collider.tag == "interaction")
             {
-                GUI.Box(new Rect(Screen.width / 2, Screen.height / 2, 100, 25), "Open");
-                //Debug.Log("Available to open door");
+                if (guiShow == true && hit.collider.transform.GetComponent<RayCastInteract>().usedOnce == false) //Huomioi boolean-tarkistus
+                {
+                    GUI.Box(new Rect(Screen.width / 2, Screen.height / 2, 100, 25), "Use");
+                }
             }
 
-            else if (guiShow == true && hit.collider.GetComponent<RayCastDoorRemote>().isOpen == true && hit.collider.GetComponent<RayCastDoorRemote>().door.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("opened"))
+            if (hit.collider.tag == "generator")
             {
-
-                GUI.Box(new Rect(Screen.width / 2, Screen.height / 2, 100, 25), "Close");
-                //Debug.Log("Available to close door");
+                if (guiShow == true && hit.collider.GetComponent<GeneratorManager>().isInteractable == true)
+                {
+                    GUI.Box(new Rect(Screen.width / 2, Screen.height / 2, 100, 25), "Turn on");
+                }
             }
-        }
 
-        if (hit.collider.tag == "interaction")
-        {
-            if (guiShow == true && hit.collider.transform.GetComponent<RayCastInteract>().usedOnce == false) //Huomioi boolean-tarkistus
+            if (hit.collider.tag == "key")
             {
-                GUI.Box(new Rect(Screen.width / 2, Screen.height / 2, 100, 25), "Use");                
+                if (guiShow == true /*&& hit.collider.GetComponent<GeneratorManager>().isInteractable == true*/)
+                {
+                    GUI.Box(new Rect(Screen.width / 2, Screen.height / 2, 100, 25), "Pick up");
+                }
             }
-        }
 
-        if (hit.collider.tag == "generator")
-        {
-            if (guiShow == true && hit.collider.GetComponent<GeneratorManager>().isInteractable == true)
+            if (hit.collider.tag == "cardoor")
             {
-                GUI.Box(new Rect(Screen.width / 2, Screen.height / 2, 100, 25), "Turn on");
-            }
-        }
-
-        if (hit.collider.tag == "key")
-        {
-            if (guiShow == true /*&& hit.collider.GetComponent<GeneratorManager>().isInteractable == true*/)
-            {
-                GUI.Box(new Rect(Screen.width / 2, Screen.height / 2, 100, 25), "Pick up");
-            }
-        }
-
-        if (hit.collider.tag == "cardoor")
-        {
-            if (guiShow == true)
-            {
-                GUI.Box(new Rect(Screen.width / 2, Screen.height / 2, 100, 25), "Pick up");
+                if (guiShow == true)
+                {
+                    GUI.Box(new Rect(Screen.width / 2, Screen.height / 2, 100, 25), "Pick up");
+                }
             }
         }
     }
